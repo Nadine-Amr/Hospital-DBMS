@@ -15,5 +15,10 @@ namespace DBapplication
         {
             InitializeComponent();
         }
+
+        private void AddMedicationButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
