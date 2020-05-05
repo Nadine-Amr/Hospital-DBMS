@@ -15,5 +15,35 @@ namespace DBapplication
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderedScansCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OrderedScansGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void view_orderScans_btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

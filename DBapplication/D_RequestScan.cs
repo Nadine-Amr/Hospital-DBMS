@@ -15,5 +15,10 @@ namespace DBapplication
         {
             InitializeComponent();
         }
+
+        private void ScanComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

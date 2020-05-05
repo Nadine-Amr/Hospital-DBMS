@@ -28,12 +28,182 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.ScanComboBox = new System.Windows.Forms.ComboBox();
+            this.PatientComboBox = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.shiftStartNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.scanEndTime = new System.Windows.Forms.Label();
+            this.logout_button = new System.Windows.Forms.Button();
+            this.back_button = new System.Windows.Forms.Button();
+            this.requst_scan_btn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftStartNumericUpDown)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // ScanComboBox
+            // 
+            this.ScanComboBox.FormattingEnabled = true;
+            this.ScanComboBox.Location = new System.Drawing.Point(134, 74);
+            this.ScanComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.ScanComboBox.Name = "ScanComboBox";
+            this.ScanComboBox.Size = new System.Drawing.Size(158, 21);
+            this.ScanComboBox.TabIndex = 7;
+            this.ScanComboBox.SelectedIndexChanged += new System.EventHandler(this.ScanComboBox_SelectedIndexChanged);
+            // 
+            // PatientComboBox
+            // 
+            this.PatientComboBox.FormattingEnabled = true;
+            this.PatientComboBox.Location = new System.Drawing.Point(134, 30);
+            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2);
+            this.PatientComboBox.Name = "PatientComboBox";
+            this.PatientComboBox.Size = new System.Drawing.Size(158, 21);
+            this.PatientComboBox.TabIndex = 6;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label2.Location = new System.Drawing.Point(51, 77);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(40, 17);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "Scan";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label1.Location = new System.Drawing.Point(51, 34);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Patient:";
+            // 
+            // shiftStartNumericUpDown
+            // 
+            this.shiftStartNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.shiftStartNumericUpDown.Location = new System.Drawing.Point(151, 131);
+            this.shiftStartNumericUpDown.Margin = new System.Windows.Forms.Padding(2);
+            this.shiftStartNumericUpDown.Maximum = new decimal(new int[] {
+            18,
+            0,
+            0,
+            0});
+            this.shiftStartNumericUpDown.Minimum = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            this.shiftStartNumericUpDown.Name = "shiftStartNumericUpDown";
+            this.shiftStartNumericUpDown.Size = new System.Drawing.Size(34, 23);
+            this.shiftStartNumericUpDown.TabIndex = 95;
+            this.shiftStartNumericUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(196, 134);
+            this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(108, 17);
+            this.label9.TabIndex = 93;
+            this.label9.Text = "Scan End Time:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(34, 135);
+            this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(113, 17);
+            this.label8.TabIndex = 92;
+            this.label8.Text = "Scan Start Time:";
+            // 
+            // scanEndTime
+            // 
+            this.scanEndTime.AutoSize = true;
+            this.scanEndTime.Location = new System.Drawing.Point(310, 138);
+            this.scanEndTime.Name = "scanEndTime";
+            this.scanEndTime.Size = new System.Drawing.Size(64, 13);
+            this.scanEndTime.TabIndex = 96;
+            this.scanEndTime.Text = "getfromQury";
+            // 
+            // logout_button
+            // 
+            this.logout_button.Location = new System.Drawing.Point(213, 281);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
+            this.logout_button.Name = "logout_button";
+            this.logout_button.Size = new System.Drawing.Size(79, 22);
+            this.logout_button.TabIndex = 99;
+            this.logout_button.Text = "Logout";
+            this.logout_button.UseVisualStyleBackColor = true;
+            // 
+            // back_button
+            // 
+            this.back_button.Location = new System.Drawing.Point(130, 281);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
+            this.back_button.Name = "back_button";
+            this.back_button.Size = new System.Drawing.Size(79, 22);
+            this.back_button.TabIndex = 98;
+            this.back_button.Text = "Back";
+            this.back_button.UseVisualStyleBackColor = true;
+            // 
+            // requst_scan_btn
+            // 
+            this.requst_scan_btn.Location = new System.Drawing.Point(159, 217);
+            this.requst_scan_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.requst_scan_btn.Name = "requst_scan_btn";
+            this.requst_scan_btn.Size = new System.Drawing.Size(104, 20);
+            this.requst_scan_btn.TabIndex = 97;
+            this.requst_scan_btn.Text = "Request Scan";
+            this.requst_scan_btn.UseVisualStyleBackColor = true;
+            // 
+            // D_RequestScan
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(422, 325);
+            this.Controls.Add(this.logout_button);
+            this.Controls.Add(this.back_button);
+            this.Controls.Add(this.requst_scan_btn);
+            this.Controls.Add(this.scanEndTime);
+            this.Controls.Add(this.shiftStartNumericUpDown);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.ScanComboBox);
+            this.Controls.Add(this.PatientComboBox);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Name = "D_RequestScan";
             this.Text = "D_RequestScan";
+            ((System.ComponentModel.ISupportInitialize)(this.shiftStartNumericUpDown)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox ScanComboBox;
+        private System.Windows.Forms.ComboBox PatientComboBox;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.NumericUpDown shiftStartNumericUpDown;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label scanEndTime;
+        private System.Windows.Forms.Button logout_button;
+        private System.Windows.Forms.Button back_button;
+        private System.Windows.Forms.Button requst_scan_btn;
     }
 }
