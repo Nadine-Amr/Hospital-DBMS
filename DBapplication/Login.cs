@@ -38,11 +38,11 @@ namespace DBapplication
 
             if (privlg > 0)
             {
-                Provided_Functionalities func = new Provided_Functionalities((Privileges)privlg);
-                func.Show(this);
-                TxtBx_pass.Clear();
-                TxtBx_username.Clear();
-                this.Hide();
+                //Provided_Functionalities func = new Provided_Functionalities((Privileges)privlg);
+                //func.Show(this);
+                //TxtBx_pass.Clear();
+                //TxtBx_username.Clear();
+                //this.Hide();
             }
             else
             {
