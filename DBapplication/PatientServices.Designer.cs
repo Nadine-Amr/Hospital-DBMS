@@ -33,7 +33,6 @@
             this.change_room_button = new System.Windows.Forms.Button();
             this.update_info_button = new System.Windows.Forms.Button();
             this.rate_doctor_button = new System.Windows.Forms.Button();
-            this.back_button = new System.Windows.Forms.Button();
             this.logout_button = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
@@ -46,6 +45,7 @@
             this.view_bills_button.TabIndex = 1;
             this.view_bills_button.Text = "View Bills";
             this.view_bills_button.UseVisualStyleBackColor = true;
+            this.view_bills_button.Click += new System.EventHandler(this.view_bills_button_Click);
             // 
             // view_history_button
             // 
@@ -55,6 +55,7 @@
             this.view_history_button.TabIndex = 2;
             this.view_history_button.Text = "View History";
             this.view_history_button.UseVisualStyleBackColor = true;
+            this.view_history_button.Click += new System.EventHandler(this.view_history_button_Click);
             // 
             // change_room_button
             // 
@@ -64,6 +65,7 @@
             this.change_room_button.TabIndex = 3;
             this.change_room_button.Text = "Change Room";
             this.change_room_button.UseVisualStyleBackColor = true;
+            this.change_room_button.Click += new System.EventHandler(this.change_room_button_Click);
             // 
             // update_info_button
             // 
@@ -73,6 +75,7 @@
             this.update_info_button.TabIndex = 4;
             this.update_info_button.Text = "Update Info";
             this.update_info_button.UseVisualStyleBackColor = true;
+            this.update_info_button.Click += new System.EventHandler(this.update_info_button_Click);
             // 
             // rate_doctor_button
             // 
@@ -82,24 +85,17 @@
             this.rate_doctor_button.TabIndex = 5;
             this.rate_doctor_button.Text = "Rate Doctor";
             this.rate_doctor_button.UseVisualStyleBackColor = true;
-            // 
-            // back_button
-            // 
-            this.back_button.Location = new System.Drawing.Point(62, 303);
-            this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(87, 27);
-            this.back_button.TabIndex = 6;
-            this.back_button.Text = "Back";
-            this.back_button.UseVisualStyleBackColor = true;
+            this.rate_doctor_button.Click += new System.EventHandler(this.rate_doctor_button_Click);
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(153, 303);
+            this.logout_button.Location = new System.Drawing.Point(106, 309);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(87, 27);
             this.logout_button.TabIndex = 7;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // label1
             // 
@@ -118,7 +114,6 @@
             this.ClientSize = new System.Drawing.Size(305, 348);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logout_button);
-            this.Controls.Add(this.back_button);
             this.Controls.Add(this.rate_doctor_button);
             this.Controls.Add(this.update_info_button);
             this.Controls.Add(this.change_room_button);
@@ -137,7 +132,6 @@
         private System.Windows.Forms.Button change_room_button;
         private System.Windows.Forms.Button update_info_button;
         private System.Windows.Forms.Button rate_doctor_button;
-        private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Button logout_button;
         private System.Windows.Forms.Label label1;
     }

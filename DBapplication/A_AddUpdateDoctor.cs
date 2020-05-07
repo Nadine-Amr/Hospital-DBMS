@@ -11,9 +11,24 @@ namespace DBapplication
 {
     public partial class A_AddUpdateDoctor : Form
     {
-        public A_AddUpdateDoctor()
+        private long _aid;
+
+        public A_AddUpdateDoctor(long aid)
         {
             InitializeComponent();
+            this._aid = aid;
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new AdminServices((long)_aid).Show();
+            this.Close();
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
         }
     }
 }

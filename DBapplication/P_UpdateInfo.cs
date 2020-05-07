@@ -11,9 +11,24 @@ namespace DBapplication
 {
     public partial class P_UpdateInfo : Form
     {
-        public P_UpdateInfo()
+        private long _pid;
+
+        public P_UpdateInfo(long pid)
         {
             InitializeComponent();
+            this._pid = pid;
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new PatientServices((long)_pid).Show();
+            this.Close();
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
         }
     }
 }

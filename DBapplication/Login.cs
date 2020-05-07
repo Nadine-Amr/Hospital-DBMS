@@ -10,12 +10,7 @@ using System.Windows.Forms;
 
 namespace DBapplication
 {
-   // EDITTTT THIS FORM AS APPROPRIATEEEEEEEEEEEEEEEEEEEEEEEEEE
-   public enum Privileges
-    {
-        Admin=1,
-        Others=2
-    }
+   
     public partial class Login : Form
     {
         
@@ -27,10 +22,6 @@ namespace DBapplication
             InitializeComponent();
             controllerObj = new Controller(); // Create the Controler Object
         }
-
-
-        
-
 
         private void Btn_Login_Click(object sender, EventArgs e)
         {
@@ -48,14 +39,6 @@ namespace DBapplication
             {
                 MessageBox.Show("Wrong username or password");
             }
-        }
-
-        
-        
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)

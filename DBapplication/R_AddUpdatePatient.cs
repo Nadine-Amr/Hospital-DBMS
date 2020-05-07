@@ -11,9 +11,24 @@ namespace DBapplication
 {
     public partial class R_AddUpdatePatient : Form
     {
-        public R_AddUpdatePatient()
+        private long _recid;
+
+        public R_AddUpdatePatient(long recid)
         {
             InitializeComponent();
+            this._recid = recid;
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new ReceptionistServices((long)_recid).Show();
+            this.Close();
         }
     }
 }

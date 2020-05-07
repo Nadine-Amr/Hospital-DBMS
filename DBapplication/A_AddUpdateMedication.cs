@@ -11,14 +11,29 @@ namespace DBapplication
 {
     public partial class A_AddUpdateMedication : Form
     {
-        public A_AddUpdateMedication()
+        private long _aid;
+
+        public A_AddUpdateMedication(long aid)
         {
             InitializeComponent();
+            this._aid = aid;
         }
 
         private void AddMedicationButton_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            new AdminServices((long)_aid).Show();
+            this.Close();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
         }
     }
 }

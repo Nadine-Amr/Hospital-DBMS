@@ -11,9 +11,12 @@ namespace DBapplication
 {
     public partial class A_ViewPrescribedMedications : Form
     {
-        public A_ViewPrescribedMedications()
+        private long _aid;
+
+        public A_ViewPrescribedMedications(long aid)
         {
             InitializeComponent();
+            this._aid = aid;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -33,12 +36,14 @@ namespace DBapplication
 
         private void logout_button_Click(object sender, EventArgs e)
         {
-
+            new Login().Show();
+            this.Close();
         }
 
         private void back_button_Click(object sender, EventArgs e)
         {
-
+            new AdminServices((long)_aid).Show();
+            this.Close();
         }
 
         private void view_orderScans_btn_Click(object sender, EventArgs e)

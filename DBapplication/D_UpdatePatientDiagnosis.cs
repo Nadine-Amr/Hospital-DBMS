@@ -11,9 +11,24 @@ namespace DBapplication
 {
     public partial class D_UpdatePatientDiagnosis : Form
     {
-        public D_UpdatePatientDiagnosis()
+        private long _did;
+
+        public D_UpdatePatientDiagnosis(long did)
         {
             InitializeComponent();
+            this._did = did;
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new DoctorServices((long)_did).Show();
+            this.Close();
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
         }
 
         private void back_button_Click(object sender, EventArgs e)

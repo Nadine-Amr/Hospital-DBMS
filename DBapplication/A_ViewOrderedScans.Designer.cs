@@ -40,72 +40,76 @@
             // OrderedScansGridView
             // 
             this.OrderedScansGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrderedScansGridView.Location = new System.Drawing.Point(39, 54);
+            this.OrderedScansGridView.Location = new System.Drawing.Point(52, 66);
+            this.OrderedScansGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OrderedScansGridView.Name = "OrderedScansGridView";
-            this.OrderedScansGridView.Size = new System.Drawing.Size(269, 150);
+            this.OrderedScansGridView.RowHeadersWidth = 51;
+            this.OrderedScansGridView.Size = new System.Drawing.Size(359, 185);
             this.OrderedScansGridView.TabIndex = 114;
             // 
             // OrderedScansCombobox
             // 
             this.OrderedScansCombobox.FormattingEnabled = true;
-            this.OrderedScansCombobox.Location = new System.Drawing.Point(135, 16);
-            this.OrderedScansCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.OrderedScansCombobox.Location = new System.Drawing.Point(180, 20);
+            this.OrderedScansCombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.OrderedScansCombobox.Name = "OrderedScansCombobox";
-            this.OrderedScansCombobox.Size = new System.Drawing.Size(158, 21);
+            this.OrderedScansCombobox.Size = new System.Drawing.Size(209, 24);
             this.OrderedScansCombobox.TabIndex = 113;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(31, 20);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(41, 25);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 17);
+            this.label1.Size = new System.Drawing.Size(113, 20);
             this.label1.TabIndex = 112;
             this.label1.Text = "Ordered Scan";
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(174, 266);
-            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
+            this.logout_button.Location = new System.Drawing.Point(232, 327);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(79, 22);
+            this.logout_button.Size = new System.Drawing.Size(105, 27);
             this.logout_button.TabIndex = 111;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(91, 266);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2);
+            this.back_button.Location = new System.Drawing.Point(121, 327);
+            this.back_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(79, 22);
+            this.back_button.Size = new System.Drawing.Size(105, 27);
             this.back_button.TabIndex = 110;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // view_orderScans_btn
             // 
-            this.view_orderScans_btn.Location = new System.Drawing.Point(109, 209);
-            this.view_orderScans_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.view_orderScans_btn.Location = new System.Drawing.Point(145, 257);
+            this.view_orderScans_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.view_orderScans_btn.Name = "view_orderScans_btn";
-            this.view_orderScans_btn.Size = new System.Drawing.Size(133, 27);
+            this.view_orderScans_btn.Size = new System.Drawing.Size(177, 33);
             this.view_orderScans_btn.TabIndex = 109;
             this.view_orderScans_btn.Text = "View Ordered Scans";
             this.view_orderScans_btn.UseVisualStyleBackColor = true;
             // 
             // A_ViewOrderedScans
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(344, 305);
+            this.ClientSize = new System.Drawing.Size(459, 375);
             this.Controls.Add(this.OrderedScansGridView);
             this.Controls.Add(this.OrderedScansCombobox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.view_orderScans_btn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "A_ViewOrderedScans";
             this.Text = "A_ViewOrderedScans";
             ((System.ComponentModel.ISupportInitialize)(this.OrderedScansGridView)).EndInit();

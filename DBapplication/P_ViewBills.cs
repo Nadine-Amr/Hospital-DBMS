@@ -11,14 +11,29 @@ namespace DBapplication
 {
     public partial class P_ViewBills : Form
     {
-        public P_ViewBills()
+        private long _pid;
+
+        public P_ViewBills(long pid)
         {
             InitializeComponent();
+            this._pid = pid;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new PatientServices((long)_pid).Show();
+            this.Close();
         }
     }
 }
