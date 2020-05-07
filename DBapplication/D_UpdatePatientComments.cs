@@ -31,16 +31,6 @@ namespace DBapplication
             this.Close();
         }
 
-        private void back_button_Click(object sender, EventArgs e)
-        {
-            new DoctorServices().Show();
-            this.Close();
-        }
-
-        private void logout_button_Click(object sender, EventArgs e)
-        {
-            new Login().Show();
-            this.Close();
-        }
+       
     }
 }
