@@ -51,5 +51,42 @@ namespace DBapplication
             return dbMan.ExecuteReader(query);
         }
 
+        public int DAssignMedications(long DoctorID,String PatientName, String MedicationName, decimal Dosage=0)
+        {
+            string query;
+            if (Dosage == 0)
+            {
+                 query = "Insert into Prescribed_Medications(Medication_ID, Registration_ID, Prescription_Time) "
+                           + " select RegID, MID, GETDATE() "
+                           + "From Registration as R, Medication as M"
+                           + "where M.MID = (select MID from Medication where Name = ' " + MedicationName + " ') AND R.RegID = (select Top 1 RegID from Registration where(Patient_ID = (select PID from Patient where Name= '" + PatientName + "')) AND(Doctor_ID =" + DoctorID + ") Order By Date Desc )";
+            }
+            else
+            {
+                 query = "Insert into Prescribed_Medications(Medication_ID, Registration_ID, Prescription_Time) "
+                           + " select RegID, MID, GETDATE(), "+Dosage+" "
+                           + "From Registration as R, Medication as M"
+                           + "where M.MID = (select MID from Medication where Name = ' " + MedicationName + " ') AND R.RegID = (select Top 1 RegID from Registration where(Patient_ID = (select PID from Patient where Name= '" + PatientName + "')) AND(Doctor_ID =" + DoctorID + ") Order By Date Desc )";
+            }
+           
+            return dbMan.ExecuteNonQuery(query);        
+        }
+
+        public int DRequestScans(long DoctorID, String PatientName, String ScanName)
+        {
+           string query = "Insert into Ordered_Scans(Scan_ID, Registration_ID, Scan_Start_Time, Scan_End_Time) "
+           + " select RegID, SID,GETDATE(),dateadd(hh,+1,R.Reserved_Time_Slot)"
+           + "From Registration as R, Scan as S"
+           + "where S.SID = (select SID from Scan where Name ='"+ScanName+"') AND R.RegID =(select Top 1 RegID from Registration where (Patient_ID = (select PID from Patient where Name='"+PatientName+"')) AND (Doctor_ID ="+DoctorID+") Order By Date Desc )";
+            return dbMan.ExecuteNonQuery(query);
+        }
+
+        public String GetScanEndTime(long DoctorID, String PatientName,String ScanName)
+        {
+
+            string query = "Select Scan_End_Time from Ordered_Scans as O, Registration as R, Scan as S"
+                        +"where O.Registration_ID = R.RegID And O.Scan_ID = S.SID AND S.SID = (select SID from Scan where Name = '"+ScanName+"') AND R.RegID = (select top 1 RegID from Registration where(Patient_ID = (select PID from Patient where Name= '"+PatientName+"')) AND(Doctor_ID = "+DoctorID+") Order By Date Desc )";
+            return dbMan.ExecuteNonQuery(query).ToString();
+        }
     }
 }

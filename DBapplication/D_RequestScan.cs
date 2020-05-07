@@ -12,9 +12,14 @@ namespace DBapplication
     public partial class D_RequestScan : Form
     {
         private Controller controllerObj = new Controller();
-        public D_RequestScan()
+  
+
+        private long _did;
+
+        public D_RequestScan(long did)
         {
             InitializeComponent();
+            this._did = did;
             DataTable dt1 = controllerObj.SelectScans();
             ScanComboBox.DataSource = dt1;
             ScanComboBox.DisplayMember = "Name";
@@ -28,21 +33,37 @@ namespace DBapplication
 
         }
 
+
         private void D_RequestScan_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void back_button_Click(object sender, EventArgs e)
-        {
-            new DoctorServices().Show();
-            this.Close();
         }
 
         private void logout_button_Click(object sender, EventArgs e)
         {
             new Login().Show();
             this.Close();
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new DoctorServices((long)_did).Show();
+            this.Close();
+        }
+
+        private void requst_scan_btn_Click(object sender, EventArgs e)
+        {
+            int result = controllerObj.DRequestScans(_did, PatientComboBox.Text, ScanComboBox.Text);
+
+            if (result >0)
+            {
+                string scanEndTime = controllerObj.GetScanEndTime(_did, PatientComboBox.Text, ScanComboBox.Text);
+                MessageBox.Show("Scan has been Successfully Requested! You sould conduct your Scan before " + scanEndTime+ " ");
+            }
+            else
+            {
+                MessageBox.Show("Scan Request Failed");
+            }
         }
     }
 }

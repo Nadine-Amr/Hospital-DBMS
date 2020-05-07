@@ -285,41 +285,14 @@
     <EmbeddedResource Include="A_AddUpdateAdmin.resx">
       <DependentUpon>A_AddUpdateAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="A_AddUpdateDepartment.resx">
-      <DependentUpon>A_AddUpdateDepartment.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="A_AddUpdateDoctor.resx">
       <DependentUpon>A_AddUpdateDoctor.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="A_AddUpdateMedication.resx">
-      <DependentUpon>A_AddUpdateMedication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="A_AddUpdateReceptionist.resx">
       <DependentUpon>A_AddUpdateReceptionist.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="A_AddUpdateRoom.resx">
-      <DependentUpon>A_AddUpdateRoom.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="A_AddUpdateScan.resx">
-      <DependentUpon>A_AddUpdateScan.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="A_GenerateStatisticalReports.resx">
-      <DependentUpon>A_GenerateStatisticalReports.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="A_PersonnelSearch.resx">
-      <DependentUpon>A_PersonnelSearch.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="A_UpdateInfo.resx">
       <DependentUpon>A_UpdateInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="A_ViewDoctorRatings.resx">
-      <DependentUpon>A_ViewDoctorRatings.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="A_ViewOrderedScans.resx">
-      <DependentUpon>A_ViewOrderedScans.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="A_ViewPatientRegistrations.resx">
-      <DependentUpon>A_ViewPatientRegistrations.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorServices.resx">
       <DependentUpon>DoctorServices.cs</DependentUpon>
@@ -341,9 +314,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="D_UpdatePatientState.resx">
       <DependentUpon>D_UpdatePatientState.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="D_ViewSchedule.resx">
-      <DependentUpon>D_ViewSchedule.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -369,23 +339,11 @@
     <EmbeddedResource Include="P_UpdateInfo.resx">
       <DependentUpon>P_UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="P_ViewBills.resx">
-      <DependentUpon>P_ViewBills.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="P_ViewHistory.resx">
-      <DependentUpon>P_ViewHistory.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="ReceptionistServices.resx">
       <DependentUpon>ReceptionistServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R_AddUpdatePatient.resx">
       <DependentUpon>R_AddUpdatePatient.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="R_PersonnelSearch.resx">
-      <DependentUpon>R_PersonnelSearch.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="R_RegisterPatient.resx">
-      <DependentUpon>R_RegisterPatient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="R_UpdateInfo.resx">
       <DependentUpon>R_UpdateInfo.cs</DependentUpon>
