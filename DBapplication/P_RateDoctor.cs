@@ -11,9 +11,12 @@ namespace DBapplication
 {
     public partial class P_RateDoctor : Form
     {
-        public P_RateDoctor()
+        private long _pid;
+
+        public P_RateDoctor(long pid)
         {
             InitializeComponent();
+            this._pid = pid;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -29,6 +32,18 @@ namespace DBapplication
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new PatientServices((long)_pid).Show();
+            this.Close();
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
         }
     }
 }

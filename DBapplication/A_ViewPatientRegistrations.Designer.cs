@@ -40,72 +40,76 @@
             // patientRegistrationGridView
             // 
             this.patientRegistrationGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.patientRegistrationGridView.Location = new System.Drawing.Point(36, 53);
+            this.patientRegistrationGridView.Location = new System.Drawing.Point(48, 65);
+            this.patientRegistrationGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.patientRegistrationGridView.Name = "patientRegistrationGridView";
-            this.patientRegistrationGridView.Size = new System.Drawing.Size(269, 150);
+            this.patientRegistrationGridView.RowHeadersWidth = 51;
+            this.patientRegistrationGridView.Size = new System.Drawing.Size(359, 185);
             this.patientRegistrationGridView.TabIndex = 108;
             // 
             // PatientRegistrationCombobox
             // 
             this.PatientRegistrationCombobox.FormattingEnabled = true;
-            this.PatientRegistrationCombobox.Location = new System.Drawing.Point(132, 15);
-            this.PatientRegistrationCombobox.Margin = new System.Windows.Forms.Padding(2);
+            this.PatientRegistrationCombobox.Location = new System.Drawing.Point(176, 18);
+            this.PatientRegistrationCombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientRegistrationCombobox.Name = "PatientRegistrationCombobox";
-            this.PatientRegistrationCombobox.Size = new System.Drawing.Size(158, 21);
+            this.PatientRegistrationCombobox.Size = new System.Drawing.Size(209, 24);
             this.PatientRegistrationCombobox.TabIndex = 107;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(33, 19);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(44, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 17);
+            this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 106;
             this.label1.Text = "Patient Name";
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(171, 265);
-            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
+            this.logout_button.Location = new System.Drawing.Point(228, 326);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(79, 22);
+            this.logout_button.Size = new System.Drawing.Size(105, 27);
             this.logout_button.TabIndex = 105;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(88, 265);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2);
+            this.back_button.Location = new System.Drawing.Point(117, 326);
+            this.back_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(79, 22);
+            this.back_button.Size = new System.Drawing.Size(105, 27);
             this.back_button.TabIndex = 104;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // view_registration_btn
             // 
-            this.view_registration_btn.Location = new System.Drawing.Point(117, 221);
-            this.view_registration_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.view_registration_btn.Location = new System.Drawing.Point(156, 272);
+            this.view_registration_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.view_registration_btn.Name = "view_registration_btn";
-            this.view_registration_btn.Size = new System.Drawing.Size(104, 27);
+            this.view_registration_btn.Size = new System.Drawing.Size(139, 33);
             this.view_registration_btn.TabIndex = 103;
             this.view_registration_btn.Text = "View Regestration";
             this.view_registration_btn.UseVisualStyleBackColor = true;
             // 
             // A_ViewPatientRegistrations
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(338, 303);
+            this.ClientSize = new System.Drawing.Size(451, 373);
             this.Controls.Add(this.patientRegistrationGridView);
             this.Controls.Add(this.PatientRegistrationCombobox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.view_registration_btn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "A_ViewPatientRegistrations";
             this.Text = "A_ViewPatientRegistrations";
             ((System.ComponentModel.ISupportInitialize)(this.patientRegistrationGridView)).EndInit();

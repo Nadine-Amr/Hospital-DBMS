@@ -37,30 +37,32 @@
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(183, 277);
-            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
+            this.logout_button.Location = new System.Drawing.Point(244, 341);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(79, 22);
+            this.logout_button.Size = new System.Drawing.Size(105, 27);
             this.logout_button.TabIndex = 96;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(100, 277);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2);
+            this.back_button.Location = new System.Drawing.Point(133, 341);
+            this.back_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(79, 22);
+            this.back_button.Size = new System.Drawing.Size(105, 27);
             this.back_button.TabIndex = 95;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // view_schedule_btn
             // 
-            this.view_schedule_btn.Location = new System.Drawing.Point(129, 213);
-            this.view_schedule_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.view_schedule_btn.Location = new System.Drawing.Point(172, 262);
+            this.view_schedule_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.view_schedule_btn.Name = "view_schedule_btn";
-            this.view_schedule_btn.Size = new System.Drawing.Size(104, 20);
+            this.view_schedule_btn.Size = new System.Drawing.Size(139, 25);
             this.view_schedule_btn.TabIndex = 94;
             this.view_schedule_btn.Text = "View Schedule";
             this.view_schedule_btn.UseVisualStyleBackColor = true;
@@ -68,20 +70,23 @@
             // doctor_view_schedule
             // 
             this.doctor_view_schedule.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.doctor_view_schedule.Location = new System.Drawing.Point(12, 24);
+            this.doctor_view_schedule.Location = new System.Drawing.Point(16, 30);
+            this.doctor_view_schedule.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.doctor_view_schedule.Name = "doctor_view_schedule";
-            this.doctor_view_schedule.Size = new System.Drawing.Size(338, 173);
+            this.doctor_view_schedule.RowHeadersWidth = 51;
+            this.doctor_view_schedule.Size = new System.Drawing.Size(451, 213);
             this.doctor_view_schedule.TabIndex = 97;
             // 
             // D_ViewSchedule
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(362, 315);
+            this.ClientSize = new System.Drawing.Size(483, 388);
             this.Controls.Add(this.doctor_view_schedule);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.view_schedule_btn);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "D_ViewSchedule";
             this.Text = "D_ViewSchedule";
             ((System.ComponentModel.ISupportInitialize)(this.doctor_view_schedule)).EndInit();

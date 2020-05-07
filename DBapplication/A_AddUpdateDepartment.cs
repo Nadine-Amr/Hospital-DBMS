@@ -11,9 +11,24 @@ namespace DBapplication
 {
     public partial class A_AddUpdateDepartment : Form
     {
-        public A_AddUpdateDepartment()
+        private long _aid;
+
+        public A_AddUpdateDepartment(long aid)
         {
             InitializeComponent();
+            this._aid = aid;
+        }
+
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            new AdminServices((long)_aid).Show();
+            this.Close();
+        }
+
+        private void LogOutButton_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
         }
     }
 }

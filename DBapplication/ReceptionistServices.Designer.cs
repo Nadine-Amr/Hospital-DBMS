@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.logout_button = new System.Windows.Forms.Button();
-            this.back_button = new System.Windows.Forms.Button();
             this.personnel_search_button = new System.Windows.Forms.Button();
             this.update_info_button = new System.Windows.Forms.Button();
             this.register_pat_button = new System.Windows.Forms.Button();
@@ -49,21 +48,13 @@
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(155, 253);
+            this.logout_button.Location = new System.Drawing.Point(97, 253);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(102, 27);
             this.logout_button.TabIndex = 15;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
-            // 
-            // back_button
-            // 
-            this.back_button.Location = new System.Drawing.Point(47, 253);
-            this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(102, 27);
-            this.back_button.TabIndex = 14;
-            this.back_button.Text = "Back";
-            this.back_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // personnel_search_button
             // 
@@ -73,6 +64,7 @@
             this.personnel_search_button.TabIndex = 13;
             this.personnel_search_button.Text = "Personnel Search";
             this.personnel_search_button.UseVisualStyleBackColor = true;
+            this.personnel_search_button.Click += new System.EventHandler(this.personnel_search_button_Click);
             // 
             // update_info_button
             // 
@@ -82,6 +74,7 @@
             this.update_info_button.TabIndex = 12;
             this.update_info_button.Text = "Update Info";
             this.update_info_button.UseVisualStyleBackColor = true;
+            this.update_info_button.Click += new System.EventHandler(this.update_info_button_Click);
             // 
             // register_pat_button
             // 
@@ -91,6 +84,7 @@
             this.register_pat_button.TabIndex = 10;
             this.register_pat_button.Text = "Register Patient";
             this.register_pat_button.UseVisualStyleBackColor = true;
+            this.register_pat_button.Click += new System.EventHandler(this.register_pat_button_Click);
             // 
             // add_upd_pat_button
             // 
@@ -100,6 +94,7 @@
             this.add_upd_pat_button.TabIndex = 9;
             this.add_upd_pat_button.Text = "Add/Update Patient";
             this.add_upd_pat_button.UseVisualStyleBackColor = true;
+            this.add_upd_pat_button.Click += new System.EventHandler(this.add_upd_pat_button_Click);
             // 
             // ReceptionistServices
             // 
@@ -108,7 +103,6 @@
             this.ClientSize = new System.Drawing.Size(302, 311);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logout_button);
-            this.Controls.Add(this.back_button);
             this.Controls.Add(this.personnel_search_button);
             this.Controls.Add(this.update_info_button);
             this.Controls.Add(this.register_pat_button);
@@ -124,7 +118,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button logout_button;
-        private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Button personnel_search_button;
         private System.Windows.Forms.Button update_info_button;
         private System.Windows.Forms.Button register_pat_button;

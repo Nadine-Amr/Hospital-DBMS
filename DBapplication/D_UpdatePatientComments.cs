@@ -11,9 +11,24 @@ namespace DBapplication
 {
     public partial class D_UpdatePatientComments : Form
     {
-        public D_UpdatePatientComments()
+        private long _did;
+
+        public D_UpdatePatientComments(long did)
         {
             InitializeComponent();
+            this._did = did;
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new DoctorServices((long)_did).Show();
+            this.Close();
         }
     }
 }

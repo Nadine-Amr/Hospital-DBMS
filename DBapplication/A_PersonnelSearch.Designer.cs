@@ -43,9 +43,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 42);
+            this.label1.Location = new System.Drawing.Point(16, 52);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 16);
+            this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Name :";
             // 
@@ -53,9 +54,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(298, 42);
+            this.label2.Location = new System.Drawing.Point(397, 52);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(46, 16);
+            this.label2.Size = new System.Drawing.Size(55, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "Type :";
             // 
@@ -67,59 +69,68 @@
             "Doctor",
             "Patient",
             "Receptionist"});
-            this.TypeComboBox.Location = new System.Drawing.Point(350, 42);
+            this.TypeComboBox.Location = new System.Drawing.Point(467, 52);
+            this.TypeComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.TypeComboBox.Name = "TypeComboBox";
-            this.TypeComboBox.Size = new System.Drawing.Size(121, 21);
+            this.TypeComboBox.Size = new System.Drawing.Size(160, 24);
             this.TypeComboBox.TabIndex = 2;
             this.TypeComboBox.Text = "Admin";
             // 
             // NameTextBox
             // 
-            this.NameTextBox.Location = new System.Drawing.Point(71, 42);
+            this.NameTextBox.Location = new System.Drawing.Point(95, 52);
+            this.NameTextBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NameTextBox.Name = "NameTextBox";
-            this.NameTextBox.Size = new System.Drawing.Size(100, 20);
+            this.NameTextBox.Size = new System.Drawing.Size(132, 22);
             this.NameTextBox.TabIndex = 3;
             // 
             // dataGridView
             // 
             this.dataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView.Location = new System.Drawing.Point(12, 69);
+            this.dataGridView.Location = new System.Drawing.Point(16, 85);
+            this.dataGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView.Name = "dataGridView";
-            this.dataGridView.Size = new System.Drawing.Size(492, 181);
+            this.dataGridView.RowHeadersWidth = 51;
+            this.dataGridView.Size = new System.Drawing.Size(656, 223);
             this.dataGridView.TabIndex = 4;
             // 
             // ExcuteButton
             // 
-            this.ExcuteButton.Location = new System.Drawing.Point(425, 258);
+            this.ExcuteButton.Location = new System.Drawing.Point(567, 318);
+            this.ExcuteButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.ExcuteButton.Name = "ExcuteButton";
-            this.ExcuteButton.Size = new System.Drawing.Size(75, 23);
+            this.ExcuteButton.Size = new System.Drawing.Size(100, 28);
             this.ExcuteButton.TabIndex = 5;
             this.ExcuteButton.Text = "Excute";
             this.ExcuteButton.UseVisualStyleBackColor = true;
             // 
             // LogOutButton
             // 
-            this.LogOutButton.Location = new System.Drawing.Point(227, 258);
+            this.LogOutButton.Location = new System.Drawing.Point(303, 318);
+            this.LogOutButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.LogOutButton.Name = "LogOutButton";
-            this.LogOutButton.Size = new System.Drawing.Size(75, 23);
+            this.LogOutButton.Size = new System.Drawing.Size(100, 28);
             this.LogOutButton.TabIndex = 6;
             this.LogOutButton.Text = "Log Out";
             this.LogOutButton.UseVisualStyleBackColor = true;
+            this.LogOutButton.Click += new System.EventHandler(this.LogOutButton_Click);
             // 
             // BackButton
             // 
-            this.BackButton.Location = new System.Drawing.Point(15, 258);
+            this.BackButton.Location = new System.Drawing.Point(20, 318);
+            this.BackButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.Size = new System.Drawing.Size(100, 28);
             this.BackButton.TabIndex = 7;
             this.BackButton.Text = "Back";
             this.BackButton.UseVisualStyleBackColor = true;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // A_PersonnelSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(512, 293);
+            this.ClientSize = new System.Drawing.Size(683, 361);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.LogOutButton);
             this.Controls.Add(this.ExcuteButton);
@@ -128,6 +139,7 @@
             this.Controls.Add(this.TypeComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "A_PersonnelSearch";
             this.Text = "A_PersonnelSearch";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView)).EndInit();

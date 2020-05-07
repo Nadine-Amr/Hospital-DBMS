@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.logout_button = new System.Windows.Forms.Button();
-            this.back_button = new System.Windows.Forms.Button();
             this.pat_diag_button = new System.Windows.Forms.Button();
             this.update_info_button = new System.Windows.Forms.Button();
             this.assign_med_button = new System.Windows.Forms.Button();
@@ -52,21 +51,13 @@
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(161, 385);
+            this.logout_button.Location = new System.Drawing.Point(107, 385);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(105, 27);
             this.logout_button.TabIndex = 15;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
-            // 
-            // back_button
-            // 
-            this.back_button.Location = new System.Drawing.Point(50, 385);
-            this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(105, 27);
-            this.back_button.TabIndex = 14;
-            this.back_button.Text = "Back";
-            this.back_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // pat_diag_button
             // 
@@ -76,6 +67,7 @@
             this.pat_diag_button.TabIndex = 13;
             this.pat_diag_button.Text = "Update Patient Diagnosis";
             this.pat_diag_button.UseVisualStyleBackColor = true;
+            this.pat_diag_button.Click += new System.EventHandler(this.pat_diag_button_Click);
             // 
             // update_info_button
             // 
@@ -85,6 +77,7 @@
             this.update_info_button.TabIndex = 12;
             this.update_info_button.Text = "Update Info";
             this.update_info_button.UseVisualStyleBackColor = true;
+            this.update_info_button.Click += new System.EventHandler(this.update_info_button_Click);
             // 
             // assign_med_button
             // 
@@ -94,6 +87,7 @@
             this.assign_med_button.TabIndex = 11;
             this.assign_med_button.Text = "Assign Medication";
             this.assign_med_button.UseVisualStyleBackColor = true;
+            this.assign_med_button.Click += new System.EventHandler(this.assign_med_button_Click);
             // 
             // pat_comments_button
             // 
@@ -103,6 +97,7 @@
             this.pat_comments_button.TabIndex = 10;
             this.pat_comments_button.Text = "Update Patient Comments";
             this.pat_comments_button.UseVisualStyleBackColor = true;
+            this.pat_comments_button.Click += new System.EventHandler(this.pat_comments_button_Click);
             // 
             // req_scan_button
             // 
@@ -112,6 +107,7 @@
             this.req_scan_button.TabIndex = 9;
             this.req_scan_button.Text = "Request Scan";
             this.req_scan_button.UseVisualStyleBackColor = true;
+            this.req_scan_button.Click += new System.EventHandler(this.req_scan_button_Click);
             // 
             // pat_state_button
             // 
@@ -121,6 +117,7 @@
             this.pat_state_button.TabIndex = 17;
             this.pat_state_button.Text = "Update Patient State";
             this.pat_state_button.UseVisualStyleBackColor = true;
+            this.pat_state_button.Click += new System.EventHandler(this.pat_state_button_Click);
             // 
             // view_sched_button
             // 
@@ -130,6 +127,7 @@
             this.view_sched_button.TabIndex = 18;
             this.view_sched_button.Text = "View Schedule";
             this.view_sched_button.UseVisualStyleBackColor = true;
+            this.view_sched_button.Click += new System.EventHandler(this.view_sched_button_Click);
             // 
             // DoctorServices
             // 
@@ -140,7 +138,6 @@
             this.Controls.Add(this.pat_state_button);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logout_button);
-            this.Controls.Add(this.back_button);
             this.Controls.Add(this.pat_diag_button);
             this.Controls.Add(this.update_info_button);
             this.Controls.Add(this.assign_med_button);
@@ -158,7 +155,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button logout_button;
-        private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Button pat_diag_button;
         private System.Windows.Forms.Button update_info_button;
         private System.Windows.Forms.Button assign_med_button;

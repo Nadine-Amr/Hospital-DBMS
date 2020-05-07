@@ -37,30 +37,32 @@
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(146, 251);
-            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
+            this.logout_button.Location = new System.Drawing.Point(195, 309);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(79, 22);
+            this.logout_button.Size = new System.Drawing.Size(105, 27);
             this.logout_button.TabIndex = 95;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(63, 251);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2);
+            this.back_button.Location = new System.Drawing.Point(84, 309);
+            this.back_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(79, 22);
+            this.back_button.Size = new System.Drawing.Size(105, 27);
             this.back_button.TabIndex = 94;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // ChnageRoom
             // 
-            this.ChnageRoom.Location = new System.Drawing.Point(88, 210);
-            this.ChnageRoom.Margin = new System.Windows.Forms.Padding(2);
+            this.ChnageRoom.Location = new System.Drawing.Point(117, 258);
+            this.ChnageRoom.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.ChnageRoom.Name = "ChnageRoom";
-            this.ChnageRoom.Size = new System.Drawing.Size(112, 22);
+            this.ChnageRoom.Size = new System.Drawing.Size(149, 27);
             this.ChnageRoom.TabIndex = 96;
             this.ChnageRoom.Text = "Change Room";
             this.ChnageRoom.UseVisualStyleBackColor = true;
@@ -69,10 +71,9 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(14, 65);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(19, 80);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(144, 17);
+            this.label4.Size = new System.Drawing.Size(172, 20);
             this.label4.TabIndex = 97;
             this.label4.Text = "Current room type is :";
             // 
@@ -80,24 +81,24 @@
             // 
             this.curr_type.AutoSize = true;
             this.curr_type.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.curr_type.Location = new System.Drawing.Point(199, 65);
-            this.curr_type.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.curr_type.Location = new System.Drawing.Point(265, 80);
             this.curr_type.Name = "curr_type";
-            this.curr_type.Size = new System.Drawing.Size(35, 17);
+            this.curr_type.Size = new System.Drawing.Size(40, 20);
             this.curr_type.TabIndex = 98;
             this.curr_type.Text = "type";
             this.curr_type.Click += new System.EventHandler(this.label1_Click);
             // 
             // P_ChangeRoom
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 298);
+            this.ClientSize = new System.Drawing.Size(395, 367);
             this.Controls.Add(this.curr_type);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.ChnageRoom);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.back_button);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "P_ChangeRoom";
             this.Text = "P_ChangeRoom";
             this.ResumeLayout(false);

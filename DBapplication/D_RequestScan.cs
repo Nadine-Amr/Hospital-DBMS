@@ -11,14 +11,29 @@ namespace DBapplication
 {
     public partial class D_RequestScan : Form
     {
-        public D_RequestScan()
+        private long _did;
+
+        public D_RequestScan(long did)
         {
             InitializeComponent();
+            this._did = did;
         }
 
         private void ScanComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new DoctorServices((long)_did).Show();
+            this.Close();
         }
     }
 }

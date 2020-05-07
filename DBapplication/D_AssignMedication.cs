@@ -11,9 +11,24 @@ namespace DBapplication
 {
     public partial class D_AssignMedication : Form
     {
-        public D_AssignMedication()
+        private long _did;
+
+        public D_AssignMedication(long did)
         {
             InitializeComponent();
+            this._did = did;
+        }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new DoctorServices((long)_did).Show();
+            this.Close();
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
         }
     }
 }
