@@ -294,6 +294,9 @@
     <EmbeddedResource Include="A_UpdateInfo.resx">
       <DependentUpon>A_UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="A_ViewDoctorRatings.resx">
+      <DependentUpon>A_ViewDoctorRatings.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DoctorServices.resx">
       <DependentUpon>DoctorServices.cs</DependentUpon>
     </EmbeddedResource>

@@ -17,16 +17,96 @@ namespace DBapplication
             dbMan = new DBManager(); // Create the DBManager Object
         }
 
-        //checks the username/password and returns the priviledges associated with this user
-        //Returns 0 in case of error
-        // DELETE IF NOT NEEDEDDDDDDDDDDDDDDDDDDDDDD
-        public int CheckPassword_Basic(string username, string password)
+        // Checks the patient username/password and returns the patient id
+        // Returns -1 in patient is not found
+        public int PatientPasswordCheck(string username, string password)
         {
-            string query = "SELECT priv from Users_basic where username = '" + username + "' and password='" + password + "';";
+            string query = "SELECT PID FROM Patient where Username = '" + username + "' and Password = '" + password + "';";
             object p = dbMan.ExecuteScalar(query);
-            if (p == null) return 0;
-            else return (int)p;
+
+            if (p == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)((long)p);
+            }
         }
+
+        // Checks the doctor username/password and returns the doctor id
+        // Returns -1 in doctor is not found
+        public int DoctorPasswordCheck(string username, string password)
+        {
+            string query = "SELECT DID FROM Doctor where Username = '" + username + "' and Password = '" + password + "';";
+            object p = dbMan.ExecuteScalar(query);
+
+            if (p == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)((long)p);
+            }
+        }
+
+        // Checks the receptionist username/password and returns the receptionist id
+        // Returns -1 in receptionist is not found
+        public int ReceptionistPasswordCheck(string username, string password)
+        {
+            string query = "SELECT RecID FROM Receptionist where Username = '" + username + "' and Password = '" + password + "';";
+            object p = dbMan.ExecuteScalar(query);
+
+            if (p == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)((long)p);
+            }
+        }
+
+        // Checks the admin username/password and returns the admin id
+        // Returns -1 in admin is not found
+        public int AdminPasswordCheck(string username, string password)
+        {
+            string query = "SELECT AID FROM Admin where Username = '" + username + "' and Password = '" + password + "';";
+            object p = dbMan.ExecuteScalar(query);
+
+            if (p == null)
+            {
+                return -1;
+            }
+            else
+            {
+                return (int)((long)p);
+            }
+        }
+
+        /////////////////     DOCTOR FORMS     /////////////////
+
+        public DataTable SelectDoctorIDsNames()
+        {
+            string query = "SELECT DID, Name FROM Doctor;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable ViewAvgDrsRatings()
+        {
+            string query = "SELECT Name as 'Doctor Name', Avg_Rating as 'Average Rating' FROM Doctor;";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable ViewDrRatings(int did)
+        {
+            string query = "SELECT DR.Date as 'Date', P.Name as 'Patient Name', DR.Rate as 'Rating' FROM Doctor_Ratings as DR, Patient as P, Doctor as D WHERE DR.Doctor_ID = " + did + " AND DR.Doctor_ID = D.DID AND DR.Patient_ID = P.PID ORDER BY DR.Date;";
+            return dbMan.ExecuteReader(query);
+        }
+
+
+        ////////////////////////////////////////////////////////
 
         public void TerminateConnection()
         {

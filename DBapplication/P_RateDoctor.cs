@@ -36,11 +36,7 @@ namespace DBapplication
 
         private void back_button_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-            new PatientServices().Show();
-=======
             new PatientServices((long)_pid).Show();
->>>>>>> 2682d37b2e82e86193246f25826c9ef9db953279
             this.Close();
         }
 
