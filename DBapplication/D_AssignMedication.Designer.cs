@@ -49,6 +49,7 @@
             this.logout_button.TabIndex = 30;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // back_button
             // 
@@ -59,6 +60,7 @@
             this.back_button.TabIndex = 29;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // assign_medication
             // 
@@ -159,6 +161,7 @@
             this.Controls.Add(this.assign_medication);
             this.Name = "D_AssignMedication";
             this.Text = "D_AssignMedication";
+            this.Load += new System.EventHandler(this.D_AssignMedication_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -41,9 +41,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(60, 56);
+            this.label1.Location = new System.Drawing.Point(45, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(66, 20);
+            this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Patient:";
             // 
@@ -51,60 +52,68 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(60, 110);
+            this.label2.Location = new System.Drawing.Point(45, 89);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 20);
+            this.label2.Size = new System.Drawing.Size(45, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "State:";
             // 
             // PatientComboBox
             // 
             this.PatientComboBox.FormattingEnabled = true;
-            this.PatientComboBox.Location = new System.Drawing.Point(171, 52);
+            this.PatientComboBox.Location = new System.Drawing.Point(128, 42);
+            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.PatientComboBox.Name = "PatientComboBox";
-            this.PatientComboBox.Size = new System.Drawing.Size(209, 24);
+            this.PatientComboBox.Size = new System.Drawing.Size(158, 21);
             this.PatientComboBox.TabIndex = 2;
             // 
             // StateComboBox
             // 
             this.StateComboBox.FormattingEnabled = true;
-            this.StateComboBox.Location = new System.Drawing.Point(171, 106);
+            this.StateComboBox.Location = new System.Drawing.Point(128, 86);
+            this.StateComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.StateComboBox.Name = "StateComboBox";
-            this.StateComboBox.Size = new System.Drawing.Size(209, 24);
+            this.StateComboBox.Size = new System.Drawing.Size(158, 21);
             this.StateComboBox.TabIndex = 3;
             // 
             // uod_state_button
             // 
-            this.uod_state_button.Location = new System.Drawing.Point(149, 175);
+            this.uod_state_button.Location = new System.Drawing.Point(112, 142);
+            this.uod_state_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.uod_state_button.Name = "uod_state_button";
-            this.uod_state_button.Size = new System.Drawing.Size(139, 25);
+            this.uod_state_button.Size = new System.Drawing.Size(104, 20);
             this.uod_state_button.TabIndex = 4;
             this.uod_state_button.Text = "Update State";
             this.uod_state_button.UseVisualStyleBackColor = true;
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(221, 254);
+            this.logout_button.Location = new System.Drawing.Point(166, 206);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(105, 27);
+            this.logout_button.Size = new System.Drawing.Size(79, 22);
             this.logout_button.TabIndex = 27;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
+            this.logout_button.Click += new System.EventHandler(this.logout_button_Click);
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(110, 254);
+            this.back_button.Location = new System.Drawing.Point(82, 206);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(105, 27);
+            this.back_button.Size = new System.Drawing.Size(79, 22);
             this.back_button.TabIndex = 26;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
+            this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
             // D_UpdatePatientState
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(439, 319);
+            this.ClientSize = new System.Drawing.Size(329, 259);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.uod_state_button);
@@ -112,6 +121,7 @@
             this.Controls.Add(this.PatientComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "D_UpdatePatientState";
             this.Text = "D_UpdatePatientState";
             this.ResumeLayout(false);

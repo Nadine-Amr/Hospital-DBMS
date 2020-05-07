@@ -32,5 +32,24 @@ namespace DBapplication
         {
             dbMan.CloseConnection();
         }
+
+        public DataTable SelectMedications()
+        {
+            string query = "select * from Medication";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectPatients()
+        {
+            string query = "select * from Patient";
+            return dbMan.ExecuteReader(query);
+        }
+
+        public DataTable SelectScans()
+        {
+            string query = "select * from Scan";
+            return dbMan.ExecuteReader(query);
+        }
+
     }
 }

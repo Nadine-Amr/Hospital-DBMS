@@ -30,5 +30,17 @@ namespace DBapplication
         {
 
         }
+
+        private void back_button_Click(object sender, EventArgs e)
+        {
+            new PatientServices().Show();
+            this.Close();
+        }
+
+        private void logout_button_Click(object sender, EventArgs e)
+        {
+            new Login().Show();
+            this.Close();
+        }
     }
 }
