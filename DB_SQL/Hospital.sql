@@ -113,7 +113,7 @@ Doctor_ID bigint NOT NULL,
 Patient_ID bigint NOT NULL,
 Room_ID int NOT NULL,
 Date DATETIME CHECK (Date = GETDATE()) DEFAULT GETDATE(), 
-Reserved_Time_Slot TIME NOT NULL CHECK (Reserved_Time_Slot >= '08:00:00:0000000' AND Reserved_Time_Slot <= '18:00:00:0000000'),
+Reserved_Time_Slot TIME NOT NULL CHECK (Reserved_Time_Slot >= '08 AM' AND Reserved_Time_Slot <= '06 PM'),
 State VARCHAR(18) CHECK (State = 'Waiting' OR State = 'Being Examined' OR State = 'Getting Scans' OR State = 'Buying Medications' OR State = 'Released') DEFAULT 'Waiting',
 Diagnosis VARCHAR(1000), 
 Comments VARCHAR(100),
@@ -128,8 +128,8 @@ Create Table Ordered_Scans
 (
 Registration_ID bigint NOT NULL, 
 Scan_ID int NOT NULL, 
-Scan_Start_Time TIME CHECK (Scan_Start_Time >= '08:00:00:0000000' AND Scan_Start_Time <= '18:00:00:0000000'),
-Scan_End_Time TIME CHECK (Scan_End_Time >= '08:00:00:0000000' AND Scan_End_Time <= '18:00:00:0000000'),
+Scan_Start_Time TIME CHECK (Scan_Start_Time >= '08 AM' AND Scan_Start_Time <= '06 PM'),
+Scan_End_Time TIME CHECK (Scan_End_Time >= '08 AM' AND Scan_End_Time <= '06 PM'),
 PRIMARY KEY (Registration_ID,Scan_ID),
 FOREIGN KEY (Registration_ID) REFERENCES Registration,
 FOREIGN KEY (Scan_ID) REFERENCES Scan
@@ -139,7 +139,7 @@ Create Table Prescribed_Medications
 (
 Registration_ID bigint NOT NULL, 
 Medication_ID int NOT NULL, 
-Prescription_Time TIME CHECK (Prescription_Time >= '08:00:00:0000000' AND Prescription_Time <= '18:00:00:0000000'),
+Prescription_Time TIME CHECK (Prescription_Time >= '08 AM' AND Prescription_Time <= '06 PM'),
 Dosage VARCHAR(30), 
 PRIMARY KEY (Registration_ID,Medication_ID),
 FOREIGN KEY (Registration_ID) REFERENCES Registration,
@@ -184,9 +184,9 @@ Values
 
 insert into Doctor
 values
-(1,'Diaa','D76','1234','M',25,'01247599193','Dubi',1,'08 AM' ,'06 PM' ,10000,0),
-(2,'Nour','N78','1234','F',29,'01747599193','Germany',2,'08 AM','06 PM',30000,0),
-(3,'Nesreen','N59','1234','F',31,'01247599190','Italy',3,'08 AM','06 PM',80000,0)
+(1,'Diaa','D76','1234','M',25,'01247599193','Dubi',1,'08 AM' ,'06 PM' ,10000,10),
+(2,'Nour','N78','1234','F',29,'01747599193','Germany',2,'08 AM','06 PM',30000,10),
+(3,'Nesreen','N59','1234','F',31,'01247599190','Italy',3,'08 AM','06 PM',80000,10)
 
 insert into Scan
 Values
@@ -206,5 +206,28 @@ Values
 (2,'Examination Room',50,800,2,1),
 (3,'Examination Room',35,950,3,0)
 
+insert into Registration
+Values
+(1,26, 1, 1, 1, GETDATE(), '08 AM', 'Waiting', NULL, NULL),
+(2,30, 2, 2, 2, GETDATE(), '09 AM', 'Waiting', NULL, NULL),
+(3,40, 3, 3, 3, GETDATE(), '10 AM', 'Waiting', NULL, NULL)
 
 
+insert into Ordered_Scans
+Values
+(1, 1, '08:30 AM', '09 AM'),
+(2, 2, '09:30 AM', '10 AM'),
+(3, 3, '10:30 AM', '11 AM')
+
+
+insert into Prescribed_Medications
+Values
+(1, 1, '08:30 AM', '2ml'),
+(2, 2, '09:30 AM', '1 table-spoon'),
+(3, 3, '10:30 AM', 'once a day')
+
+insert into Doctor_Ratings
+Values
+(1, 1, GETDATE(), 10),
+(2, 2, GETDATE(), 10),
+(3, 3, GETDATE(), 10)
