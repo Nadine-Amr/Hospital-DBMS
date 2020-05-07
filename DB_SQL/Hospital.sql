@@ -65,8 +65,8 @@ Age INTEGER CHECK (Age > 0),
 Mobile_Number  CHAR(11),
 Address VARCHAR(30),
 Department_ID int,
-Start_of_Working_Hours TIME CHECK (Start_of_Working_Hours >= '08:00:00:0000000' AND Start_of_Working_Hours <= '18:00:00:0000000') DEFAULT '08:00:00:0000000', 
-End_of_Working_Hours TIME CHECK (End_of_Working_Hours >= '08:00:00:0000000' AND End_of_Working_Hours <= '18:00:00:0000000') DEFAULT '18:00:00:0000000', 
+Start_of_Working_Hours TIME CHECK (Start_of_Working_Hours >= '08 AM' AND Start_of_Working_Hours <= '06 PM') DEFAULT '08 AM', 
+End_of_Working_Hours TIME CHECK (End_of_Working_Hours >= '08 AM' AND End_of_Working_Hours <= '06 PM') DEFAULT '06 PM', 
 Salary int NOT NULL CHECK (Salary > 0),
 Avg_Rating float CHECK (Avg_Rating >= 0 AND Avg_Rating <= 10) DEFAULT 0,
 PRIMARY KEY (DID), 
@@ -156,3 +156,55 @@ PRIMARY KEY (Patient_ID,Doctor_ID,Date),
 FOREIGN KEY (Patient_ID) REFERENCES Patient,
 FOREIGN KEY (Doctor_ID) REFERENCES Doctor
 );
+
+
+insert into Patient 
+values
+(1,'Mohamad', 'M16','1234', 'M',5,'01145585123','doky'),
+(2,'Ibrahim', 'I20','1234', 'M',20,'01145585193','October'),
+(3,'Fatma', 'F90','1234', 'F',7,'01245585193','Giza')
+
+insert into Admin
+Values
+(10, 'Ali','A91','1234'),
+(20, 'Hesham','H11','1234'),
+(30, 'Samir','S61','1234')
+
+insert into Receptionist
+Values
+(26, 'Ahmed','A50','1234','M',26,'01247585193','Cairo',5000),
+(30, 'hamad','H90','1234','M',45,'01347585193','Mansora',7000),
+(40, 'Remas','HM15','1234','F',27,'01247595193','Fayoom',9000)
+
+insert into Department
+Values
+(1,'Brain'),
+(2, 'heart'),
+(3, 'Eyes')
+
+insert into Doctor
+values
+(1,'Diaa','D76','1234','M',25,'01247599193','Dubi',1,'08 AM' ,'06 PM' ,10000,0),
+(2,'Nour','N78','1234','F',29,'01747599193','Germany',2,'08 AM','06 PM',30000,0),
+(3,'Nesreen','N59','1234','F',31,'01247599190','Italy',3,'08 AM','06 PM',80000,0)
+
+insert into Scan
+Values
+(1,'MRI', 200),
+(2,'Blood',300),
+(3, 'XRay',400)
+
+insert into Medication
+Values
+(1,'koha',100,'2030-05-10'),
+(2, 'Soda3',50,'2050-09-16'),
+(3, 'vitamins',90,'2090-04-19')
+
+insert into Room 
+Values
+(1,'Examination Room',40,900,1,0),
+(2,'Examination Room',50,800,2,1),
+(3,'Examination Room',35,950,3,0)
+
+
+
