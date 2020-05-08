@@ -21,7 +21,7 @@ UNIQUE (Username)
 
 Create Table Admin
 (
- AID int identity (10,10) NOT NULL,
+ AID bigint identity (10,10) NOT NULL,
  Name VARCHAR(30) NOT NULL,
  Username VARCHAR(15) NOT NULL, 
  Password VARCHAR(15) NOT NULL,
