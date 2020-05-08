@@ -21,7 +21,7 @@ UNIQUE (Username)
 
 Create Table Admin
 (
- AID bigint NOT NULL,
+ AID int identity (10,10) NOT NULL,
  Name VARCHAR(30) NOT NULL,
  Username VARCHAR(15) NOT NULL, 
  Password VARCHAR(15) NOT NULL,
@@ -164,11 +164,14 @@ values
 (2,'Ibrahim', 'I20','1234', 'M',20,'01145585193','October'),
 (3,'Fatma', 'F90','1234', 'F',7,'01245585193','Giza')
 
-insert into Admin
+SET IDENTITY_INSERT Admin ON
+insert into Admin (AID,Name,Username,Password)
 Values
 (10, 'Ali','A91','1234'),
 (20, 'Hesham','H11','1234'),
 (30, 'Samir','S61','1234')
+SET IDENTITY_INSERT Admin OFF
+
 
 insert into Receptionist
 Values
