@@ -150,7 +150,7 @@ Create Table Doctor_Ratings
 (
 Patient_ID bigint NOT NULL, 
 Doctor_ID bigint NOT NUll, 
-Date DATETIME NOT NULL CHECK (Date = GETDATE()),
+Date DATE NOT NULL CHECK (Date = CAST(getdate() AS date)),
 Rate FLOAT NOT NULL CHECK (Rate >= 0 AND Rate <= 10),
 PRIMARY KEY (Patient_ID,Doctor_ID,Date),
 FOREIGN KEY (Patient_ID) REFERENCES Patient,
