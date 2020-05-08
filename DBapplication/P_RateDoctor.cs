@@ -12,11 +12,14 @@ namespace DBapplication
     public partial class P_RateDoctor : Form
     {
         private long _pid;
-
+        private long DoctorID;
+        private Controller controllerObj = new Controller();
         public P_RateDoctor(long pid)
         {
             InitializeComponent();
             this._pid = pid;
+            last_visited_doc_name.Text = controllerObj.GetDoctorNameFromPatientID(_pid);
+            DoctorID = controllerObj.GetDoctorIDFromName(last_visited_doc_name.Text);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -44,6 +47,19 @@ namespace DBapplication
         {
             new Login().Show();
             this.Close();
+        }
+
+        private void rate_doctor_btn_Click(object sender, EventArgs e)
+        {
+            int result = controllerObj.InsertDoctorRate(_pid, DoctorID, (int)RateNumericUpDown.Value);
+            if (result >0)
+            {
+                MessageBox.Show("Thanks For Rating We appreciate it");
+            }
+            else
+            {
+                MessageBox.Show("Sorry, there was an error with submitting your rate");
+            }
         }
     }
 }

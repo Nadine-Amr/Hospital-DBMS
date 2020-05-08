@@ -23,7 +23,7 @@ namespace DBapplication
             DataTable dt1 = controllerObj.SelectScans();
             ScanComboBox.DataSource = dt1;
             ScanComboBox.DisplayMember = "Name";
-            DataTable dt2 = controllerObj.SelectPatients();
+            DataTable dt2 = controllerObj.SelectNonReleasedPatients(_did);
             PatientComboBox.DataSource = dt2;
             PatientComboBox.DisplayMember = "Name";
         }

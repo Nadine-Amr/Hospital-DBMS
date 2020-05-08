@@ -11,12 +11,14 @@ namespace DBapplication
 {
     public partial class P_ChangeRoom : Form
     {
+        private Controller controllerObj = new Controller();
         private long _pid;
 
         public P_ChangeRoom(long pid)
         {
             InitializeComponent();
             this._pid = pid;
+            curr_type.Text = controllerObj.GetRoomTypeFromPatientID(_pid);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,6 +36,31 @@ namespace DBapplication
         {
             new Login().Show();
             this.Close();
+        }
+
+        private void ChnageRoom_Click(object sender, EventArgs e)
+        {
+            DataTable RoomsID = controllerObj.GetRoomsIDsOfCertainType(curr_type.Text);
+            int freeRoomID = controllerObj.CheckRoomChangeAbility(RoomsID, controllerObj.GetReservedTimeSlotFromRegisterationByPatientID(_pid));
+            if(freeRoomID>0)
+            {
+                long regID = controllerObj.selectRegistrationIDFromPatientID(_pid);
+                int Result = controllerObj.ChangeRoom(freeRoomID, regID);
+               // MessageBox.Show(Result.ToString());
+                if(Result>0)
+                {
+                    
+                    MessageBox.Show("Room Changed to room "+ freeRoomID + "");
+                }
+                else
+                {
+                    MessageBox.Show("An error occured While Changing Rooms");
+                }
+            }
+            else
+            {
+                MessageBox.Show("sorry There is not an available room ");
+            }
         }
     }
 }

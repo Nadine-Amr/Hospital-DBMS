@@ -348,6 +348,9 @@
     <EmbeddedResource Include="R_AddUpdatePatient.resx">
       <DependentUpon>R_AddUpdatePatient.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="R_RegisterPatient.resx">
+      <DependentUpon>R_RegisterPatient.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R_UpdateInfo.resx">
       <DependentUpon>R_UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>

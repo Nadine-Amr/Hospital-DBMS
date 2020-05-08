@@ -11,12 +11,21 @@ namespace DBapplication
 {
     public partial class D_UpdatePatientState : Form
     {
+        private Controller controllerObj = new Controller();
         private long _did;
 
         public D_UpdatePatientState(long did)
         {
             InitializeComponent();
             this._did = did;
+            StateComboBox.Items.Add("Waiting");
+            StateComboBox.Items.Add("Being Examined");
+            StateComboBox.Items.Add("Getting Scans");
+            StateComboBox.Items.Add("Buying Medications");
+            StateComboBox.Items.Add("Released");
+            DataTable dt2 = controllerObj.SelectNonReleasedPatients(_did);
+            PatientComboBox.DataSource = dt2;
+            PatientComboBox.DisplayMember = "Name";
         }
 
         private void logout_button_Click(object sender, EventArgs e)
@@ -31,6 +40,29 @@ namespace DBapplication
             this.Close();
         }
 
-        
+        private void uod_state_button_Click(object sender, EventArgs e)
+        {
+            if(StateComboBox.Text =="")
+            {
+                MessageBox.Show("Please Choose A State");
+            }
+            else
+            {
+                int result = controllerObj.UpdatePatientState(PatientComboBox.Text, _did, StateComboBox.Text);
+                
+                if(result >0)
+                {
+                    MessageBox.Show("The patient's state has been successfuly Updated");
+                    DataTable dt3 = controllerObj.SelectNonReleasedPatients(_did);
+                    PatientComboBox.DataSource = dt3;
+                    PatientComboBox.DisplayMember = "Name";
+                }
+                else
+                {
+                    MessageBox.Show("There was an error with updating the patient's State");
+                }
+            }
+            
+        }
     }
 }
