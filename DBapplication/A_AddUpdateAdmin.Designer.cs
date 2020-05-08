@@ -45,18 +45,21 @@
             // adminsComboBox
             // 
             this.adminsComboBox.FormattingEnabled = true;
-            this.adminsComboBox.Location = new System.Drawing.Point(272, 47);
+            this.adminsComboBox.Location = new System.Drawing.Point(204, 38);
+            this.adminsComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.adminsComboBox.Name = "adminsComboBox";
-            this.adminsComboBox.Size = new System.Drawing.Size(235, 24);
+            this.adminsComboBox.Size = new System.Drawing.Size(177, 21);
             this.adminsComboBox.TabIndex = 63;
+            this.adminsComboBox.SelectedIndexChanged += new System.EventHandler(this.adminsComboBox_SelectedIndexChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label4.Location = new System.Drawing.Point(31, 47);
+            this.label4.Location = new System.Drawing.Point(23, 38);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(200, 20);
+            this.label4.Size = new System.Drawing.Size(169, 17);
             this.label4.TabIndex = 64;
             this.label4.Text = "Choose Admin to Update:";
             // 
@@ -64,9 +67,10 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(98, 139);
+            this.label1.Location = new System.Drawing.Point(74, 113);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 20);
+            this.label1.Size = new System.Drawing.Size(49, 17);
             this.label1.TabIndex = 65;
             this.label1.Text = "Name:";
             // 
@@ -74,26 +78,30 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label2.Location = new System.Drawing.Point(98, 193);
+            this.label2.Location = new System.Drawing.Point(74, 157);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(91, 20);
+            this.label2.Size = new System.Drawing.Size(77, 17);
             this.label2.TabIndex = 66;
             this.label2.Text = "Username:";
             // 
             // upd_admin_button
             // 
-            this.upd_admin_button.Location = new System.Drawing.Point(289, 327);
+            this.upd_admin_button.Location = new System.Drawing.Point(217, 266);
+            this.upd_admin_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.upd_admin_button.Name = "upd_admin_button";
-            this.upd_admin_button.Size = new System.Drawing.Size(139, 25);
+            this.upd_admin_button.Size = new System.Drawing.Size(104, 20);
             this.upd_admin_button.TabIndex = 67;
             this.upd_admin_button.Text = "Update Admin";
             this.upd_admin_button.UseVisualStyleBackColor = true;
+            this.upd_admin_button.Click += new System.EventHandler(this.upd_admin_button_Click);
             // 
             // back_button
             // 
-            this.back_button.Location = new System.Drawing.Point(175, 406);
+            this.back_button.Location = new System.Drawing.Point(131, 330);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.back_button.Name = "back_button";
-            this.back_button.Size = new System.Drawing.Size(105, 27);
+            this.back_button.Size = new System.Drawing.Size(79, 22);
             this.back_button.TabIndex = 68;
             this.back_button.Text = "Back";
             this.back_button.UseVisualStyleBackColor = true;
@@ -101,9 +109,10 @@
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(286, 406);
+            this.logout_button.Location = new System.Drawing.Point(214, 330);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(105, 27);
+            this.logout_button.Size = new System.Drawing.Size(79, 22);
             this.logout_button.TabIndex = 69;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
@@ -111,49 +120,55 @@
             // 
             // usernameTextBox
             // 
-            this.usernameTextBox.Location = new System.Drawing.Point(209, 191);
+            this.usernameTextBox.Location = new System.Drawing.Point(157, 155);
+            this.usernameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(250, 22);
+            this.usernameTextBox.Size = new System.Drawing.Size(188, 20);
             this.usernameTextBox.TabIndex = 70;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label3.Location = new System.Drawing.Point(98, 244);
+            this.label3.Location = new System.Drawing.Point(74, 198);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(88, 20);
+            this.label3.Size = new System.Drawing.Size(73, 17);
             this.label3.TabIndex = 71;
             this.label3.Text = "Password:";
             // 
             // passwordTextBox
             // 
-            this.passwordTextBox.Location = new System.Drawing.Point(209, 242);
+            this.passwordTextBox.Location = new System.Drawing.Point(157, 197);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.Size = new System.Drawing.Size(250, 22);
+            this.passwordTextBox.Size = new System.Drawing.Size(188, 20);
             this.passwordTextBox.TabIndex = 72;
             // 
             // nameTextBox
             // 
-            this.nameTextBox.Location = new System.Drawing.Point(209, 137);
+            this.nameTextBox.Location = new System.Drawing.Point(157, 111);
+            this.nameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Size = new System.Drawing.Size(250, 22);
+            this.nameTextBox.Size = new System.Drawing.Size(188, 20);
             this.nameTextBox.TabIndex = 73;
             // 
             // add_admin_button
             // 
-            this.add_admin_button.Location = new System.Drawing.Point(144, 327);
+            this.add_admin_button.Location = new System.Drawing.Point(108, 266);
+            this.add_admin_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_admin_button.Name = "add_admin_button";
-            this.add_admin_button.Size = new System.Drawing.Size(139, 25);
+            this.add_admin_button.Size = new System.Drawing.Size(104, 20);
             this.add_admin_button.TabIndex = 74;
             this.add_admin_button.Text = "Add Admin";
             this.add_admin_button.UseVisualStyleBackColor = true;
+            this.add_admin_button.Click += new System.EventHandler(this.add_admin_button_Click);
             // 
             // A_AddUpdateAdmin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(562, 481);
+            this.ClientSize = new System.Drawing.Size(422, 391);
             this.Controls.Add(this.add_admin_button);
             this.Controls.Add(this.nameTextBox);
             this.Controls.Add(this.passwordTextBox);
@@ -166,6 +181,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.adminsComboBox);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "A_AddUpdateAdmin";
             this.Text = "A_AddUpdateAdmin";
             this.ResumeLayout(false);
