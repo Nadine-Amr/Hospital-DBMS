@@ -40,7 +40,7 @@
             // logout_button
             // 
             this.logout_button.Location = new System.Drawing.Point(170, 205);
-            this.logout_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(79, 22);
             this.logout_button.TabIndex = 34;
@@ -51,7 +51,7 @@
             // back_button
             // 
             this.back_button.Location = new System.Drawing.Point(86, 205);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(79, 22);
             this.back_button.TabIndex = 33;
@@ -62,18 +62,19 @@
             // upd_diag_button
             // 
             this.upd_diag_button.Location = new System.Drawing.Point(116, 141);
-            this.upd_diag_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.upd_diag_button.Margin = new System.Windows.Forms.Padding(2);
             this.upd_diag_button.Name = "upd_diag_button";
             this.upd_diag_button.Size = new System.Drawing.Size(104, 20);
             this.upd_diag_button.TabIndex = 32;
             this.upd_diag_button.Text = "Update Diagnosis";
             this.upd_diag_button.UseVisualStyleBackColor = true;
+            this.upd_diag_button.Click += new System.EventHandler(this.upd_diag_button_Click);
             // 
             // PatientComboBox
             // 
             this.PatientComboBox.FormattingEnabled = true;
             this.PatientComboBox.Location = new System.Drawing.Point(108, 39);
-            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.PatientComboBox.Name = "PatientComboBox";
             this.PatientComboBox.Size = new System.Drawing.Size(188, 21);
             this.PatientComboBox.TabIndex = 30;
@@ -103,7 +104,7 @@
             // diagnosisTextBox
             // 
             this.diagnosisTextBox.Location = new System.Drawing.Point(108, 84);
-            this.diagnosisTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.diagnosisTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.diagnosisTextBox.Name = "diagnosisTextBox";
             this.diagnosisTextBox.Size = new System.Drawing.Size(188, 20);
             this.diagnosisTextBox.TabIndex = 35;
@@ -120,7 +121,7 @@
             this.Controls.Add(this.PatientComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "D_UpdatePatientDiagnosis";
             this.Text = "D_UpdatePatientDiagnosis";
             this.ResumeLayout(false);

@@ -11,12 +11,25 @@ namespace DBapplication
 {
     public partial class R_RegisterPatient : Form
     {
+        private Controller controllerObj = new Controller();
         private long _recid;
 
         public R_RegisterPatient(long recid)
         {
             InitializeComponent();
             this._recid = recid;
+            DataTable dt1 = controllerObj.SelectAllUnRelievedPatients();
+            PatientComboBox.DataSource = dt1;
+            PatientComboBox.DisplayMember = "Name";
+            DataTable dt2 = controllerObj.SelectAllReciptionists();
+            ReciptionistComboBox.DataSource = dt2;
+            ReciptionistComboBox.DisplayMember = "Name";
+            DataTable dt3 = controllerObj.SelectAllDoctors();
+            DoctorComboBox.DataSource = dt3;
+            DoctorComboBox.DisplayMember = "Name";
+            RoomComboBox.Items.Add("Examination Room");
+            RoomComboBox.Items.Add("ICU");
+            RoomComboBox.Items.Add("Surgery Room");
         }
 
         private void logout_button_Click(object sender, EventArgs e)
@@ -29,6 +42,35 @@ namespace DBapplication
         {
             new ReceptionistServices((long)_recid).Show();
             this.Close();
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            if (RoomComboBox.Text =="")
+            {
+                MessageBox.Show("Please Choose A Room Type");
+            }
+            else if (controllerObj.DoctorFreeCheck(controllerObj.GetDoctorIDFromName(DoctorComboBox.Text),(int)ReservedNumericUpDown.Value,controllerObj.GetRoomsIDsOfCertainType(RoomComboBox.Text))!=0)
+            {
+                //MessageBox.Show("please make sure that a room is available");9
+                long RoomID = controllerObj.DoctorFreeCheck(controllerObj.GetDoctorIDFromName(DoctorComboBox.Text), (int)ReservedNumericUpDown.Value, controllerObj.GetRoomsIDsOfCertainType(RoomComboBox.Text));
+                
+              
+                    int result = controllerObj.insertRegisteration(controllerObj.GetReceptionistIDFromName(ReciptionistComboBox.Text), controllerObj.GetDoctorIDFromName(DoctorComboBox.Text), controllerObj.GetPatientIDFromName(PatientComboBox.Text), RoomID, (int)ReservedNumericUpDown.Value);
+                    if (result>0)
+                    {
+
+
+
+                    MessageBox.Show("Reservation was successfull ");
+                        
+                    }
+              
+            }
+            else
+            {
+                MessageBox.Show("Doctor  is not free at this time slot Or there might not be enough rooms");
+            }
         }
     }
 }

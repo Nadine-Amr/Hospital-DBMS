@@ -40,7 +40,7 @@
             // commentsTextBox
             // 
             this.commentsTextBox.Location = new System.Drawing.Point(112, 92);
-            this.commentsTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.commentsTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.commentsTextBox.Name = "commentsTextBox";
             this.commentsTextBox.Size = new System.Drawing.Size(188, 20);
             this.commentsTextBox.TabIndex = 42;
@@ -48,7 +48,7 @@
             // logout_button
             // 
             this.logout_button.Location = new System.Drawing.Point(174, 212);
-            this.logout_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(79, 22);
             this.logout_button.TabIndex = 41;
@@ -59,7 +59,7 @@
             // back_button
             // 
             this.back_button.Location = new System.Drawing.Point(91, 212);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(79, 22);
             this.back_button.TabIndex = 40;
@@ -70,18 +70,19 @@
             // upd_comm_button
             // 
             this.upd_comm_button.Location = new System.Drawing.Point(120, 148);
-            this.upd_comm_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.upd_comm_button.Margin = new System.Windows.Forms.Padding(2);
             this.upd_comm_button.Name = "upd_comm_button";
             this.upd_comm_button.Size = new System.Drawing.Size(104, 20);
             this.upd_comm_button.TabIndex = 39;
             this.upd_comm_button.Text = "Update Comments";
             this.upd_comm_button.UseVisualStyleBackColor = true;
+            this.upd_comm_button.Click += new System.EventHandler(this.upd_comm_button_Click);
             // 
             // PatientComboBox
             // 
             this.PatientComboBox.FormattingEnabled = true;
             this.PatientComboBox.Location = new System.Drawing.Point(112, 46);
-            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.PatientComboBox.Name = "PatientComboBox";
             this.PatientComboBox.Size = new System.Drawing.Size(188, 21);
             this.PatientComboBox.TabIndex = 38;
@@ -120,7 +121,7 @@
             this.Controls.Add(this.PatientComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "D_UpdatePatientComments";
             this.Text = "D_UpdatePatientComments";
             this.ResumeLayout(false);

@@ -37,14 +37,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.assignDosageChkBox = new System.Windows.Forms.CheckBox();
-            this.DosageNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            ((System.ComponentModel.ISupportInitialize)(this.DosageNumericUpDown)).BeginInit();
+            this.DosageTextBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // logout_button
             // 
             this.logout_button.Location = new System.Drawing.Point(191, 286);
-            this.logout_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(2);
             this.logout_button.Name = "logout_button";
             this.logout_button.Size = new System.Drawing.Size(79, 22);
             this.logout_button.TabIndex = 30;
@@ -55,7 +54,7 @@
             // back_button
             // 
             this.back_button.Location = new System.Drawing.Point(107, 286);
-            this.back_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.back_button.Margin = new System.Windows.Forms.Padding(2);
             this.back_button.Name = "back_button";
             this.back_button.Size = new System.Drawing.Size(79, 22);
             this.back_button.TabIndex = 29;
@@ -66,7 +65,7 @@
             // assign_medication
             // 
             this.assign_medication.Location = new System.Drawing.Point(137, 238);
-            this.assign_medication.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.assign_medication.Margin = new System.Windows.Forms.Padding(2);
             this.assign_medication.Name = "assign_medication";
             this.assign_medication.Size = new System.Drawing.Size(104, 20);
             this.assign_medication.TabIndex = 28;
@@ -78,7 +77,7 @@
             // 
             this.MedicationComboBox.FormattingEnabled = true;
             this.MedicationComboBox.Location = new System.Drawing.Point(198, 72);
-            this.MedicationComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MedicationComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.MedicationComboBox.Name = "MedicationComboBox";
             this.MedicationComboBox.Size = new System.Drawing.Size(158, 21);
             this.MedicationComboBox.TabIndex = 34;
@@ -87,7 +86,7 @@
             // 
             this.PatientComboBox.FormattingEnabled = true;
             this.PatientComboBox.Location = new System.Drawing.Point(198, 28);
-            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(2);
             this.PatientComboBox.Name = "PatientComboBox";
             this.PatientComboBox.Size = new System.Drawing.Size(158, 21);
             this.PatientComboBox.TabIndex = 33;
@@ -137,24 +136,19 @@
             this.assignDosageChkBox.Text = "Assign Dosage";
             this.assignDosageChkBox.UseVisualStyleBackColor = true;
             // 
-            // DosageNumericUpDown
+            // DosageTextBox
             // 
-            this.DosageNumericUpDown.Location = new System.Drawing.Point(198, 120);
-            this.DosageNumericUpDown.Maximum = new decimal(new int[] {
-            1000000000,
-            0,
-            0,
-            0});
-            this.DosageNumericUpDown.Name = "DosageNumericUpDown";
-            this.DosageNumericUpDown.Size = new System.Drawing.Size(158, 20);
-            this.DosageNumericUpDown.TabIndex = 38;
+            this.DosageTextBox.Location = new System.Drawing.Point(198, 123);
+            this.DosageTextBox.Name = "DosageTextBox";
+            this.DosageTextBox.Size = new System.Drawing.Size(158, 20);
+            this.DosageTextBox.TabIndex = 38;
             // 
             // D_AssignMedication
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 331);
-            this.Controls.Add(this.DosageNumericUpDown);
+            this.Controls.Add(this.DosageTextBox);
             this.Controls.Add(this.assignDosageChkBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.MedicationComboBox);
@@ -167,7 +161,6 @@
             this.Name = "D_AssignMedication";
             this.Text = "D_AssignMedication";
             this.Load += new System.EventHandler(this.D_AssignMedication_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DosageNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -184,6 +177,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.CheckBox assignDosageChkBox;
-        private System.Windows.Forms.NumericUpDown DosageNumericUpDown;
+        private System.Windows.Forms.TextBox DosageTextBox;
     }
 }

@@ -25,7 +25,7 @@ namespace DBapplication
             DataTable dt1 = controllerObj.SelectMedications();
             MedicationComboBox.DataSource = dt1;
             MedicationComboBox.DisplayMember = "Name";
-            DataTable dt2 = controllerObj.SelectPatients();
+            DataTable dt2 = controllerObj.SelectNonReleasedPatients(_did);
             PatientComboBox.DataSource = dt2;
             PatientComboBox.DisplayMember = "Name";
 
@@ -49,13 +49,13 @@ namespace DBapplication
             int result;
             if (assignDosageChkBox.Checked)
             {
-                if(DosageNumericUpDown.Value == 0)
+                if(DosageTextBox.Text.Length == 0)
                 {
                     MessageBox.Show("Please insert a Dosage");
                 }
                 else
                 {
-                    result = controllerObj.DAssignMedications(_did, PatientComboBox.Text, MedicationComboBox.Text, DosageNumericUpDown.Value);
+                    result = controllerObj.DAssignMedications(_did, PatientComboBox.Text, MedicationComboBox.Text, DosageTextBox.Text);
                     if (result > 0)
                     {
                         MessageBox.Show("the medication has been successfully assigned");
