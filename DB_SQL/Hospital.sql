@@ -10,8 +10,8 @@ PID bigint identity (1,1) NOT NULL,
 Name VARCHAR(30) NOT NULL, 
 Username VARCHAR(15) NOT NULL,
 Password VARCHAR(15) NOT NULL,
-Gender CHAR(1) CHECK (Gender = 'M' OR Gender = 'F'),
-Age INTEGER CHECK (Age > 0),
+Gender CHAR(1) CHECK (Gender = 'M' OR Gender = 'F') NOT NULL,
+Age INTEGER CHECK (Age > 0) NOT NULL,
 Mobile_Number  CHAR(11),
 Address VARCHAR(30),
 PRIMARY KEY (PID),
@@ -36,11 +36,11 @@ RecID bigint identity (1,1) NOT NULL,
 Name VARCHAR(30) NOT NULL, 
 Username VARCHAR(15) NOT NULL,
 Password VARCHAR(15) NOT NULL,
-Gender CHAR(1) CHECK (Gender = 'M' OR Gender = 'F'),
-Age INTEGER CHECK (Age > 0),
+Gender CHAR(1) CHECK (Gender = 'M' OR Gender = 'F') NOT NULL,
+Age INTEGER CHECK (Age > 0) NOT NULL,
 Mobile_Number  CHAR(11),
 Address VARCHAR(30),
-Salary int CHECK (Salary > 0),
+Salary int CHECK (Salary > 0) NOT NULL,
 PRIMARY KEY (RecID),
 UNIQUE (Name),
 UNIQUE (Username)
@@ -60,11 +60,11 @@ DID bigint identity (1,1) NOT NULL,
 Name VARCHAR(30) NOT NULL,
 Username VARCHAR(15) NOT NULL, 
 Password VARCHAR(15) NOT NULL,
-Gender CHAR(1) CHECK (Gender = 'M' OR Gender = 'F'),
-Age INTEGER CHECK (Age > 0),
+Gender CHAR(1) CHECK (Gender = 'M' OR Gender = 'F') NOT NULL,
+Age INTEGER CHECK (Age > 0) NOT NULL,
 Mobile_Number  CHAR(11),
 Address VARCHAR(30),
-Department_ID int,
+Department_ID int NOT NULL,
 Start_of_Working_Hours TIME CHECK (Start_of_Working_Hours >= '08 AM' AND Start_of_Working_Hours <= '06 PM') DEFAULT '08 AM', 
 End_of_Working_Hours TIME CHECK (End_of_Working_Hours >= '08 AM' AND End_of_Working_Hours <= '06 PM') DEFAULT '06 PM', 
 Salary int NOT NULL CHECK (Salary > 0),
@@ -78,29 +78,30 @@ FOREIGN KEY (Department_ID) REFERENCES Department
 Create Table Scan
 (
  SID int identity (1,1) NOT NULL CHECK (SID >= 1 AND SID <= 100),
- Name VARCHAR(30),
+ Name VARCHAR(30) NOT NULL,
  Price float NOT NULL CHECK (Price >= 100 AND Price <= 1000),
- PRIMARY KEY (SID)
+ PRIMARY KEY (SID),
+ UNIQUE (Name)
 );
 
 Create Table Medication
 (
  MID int identity (1,1) NOT NULL CHECK (MID >= 1 AND MID <= 500),
- Name VARCHAR(30),
+ Name VARCHAR(30) NOT NULL,
  Price float NOT NULL CHECK (Price >= 20 AND Price <= 1000),
  Exp_Date DATE CHECK (Exp_Date > CAST(getdate() AS DATE)),
- PRIMARY KEY (MID)
+ PRIMARY KEY (MID),
+ UNIQUE (Name)
 );
 
 
 Create Table Room
 (
  RID int identity (1,1) NOT NULL CHECK (RID >= 1 AND RID <= 500),
- Type VARCHAR(16) CHECK (Type = 'Examination Room' OR Type = 'Surgery Room' OR Type = 'ICU'),
+ Type VARCHAR(16) CHECK (Type = 'Examination Room' OR Type = 'Surgery Room' OR Type = 'ICU') NOT NULL,
  Size FLOAT  CHECK (Size >= 30 AND Size <= 60),
  Price FLOAT NOT NULL CHECK (Price >= 100 AND Price <= 1000),
- Department_ID int,
- Room_Availability Binary DEFAULT 0,
+ Department_ID int NOT NULL,
  PRIMARY KEY (RID),
  FOREIGN KEY (Department_ID) REFERENCES Department,
 );
@@ -157,6 +158,30 @@ FOREIGN KEY (Patient_ID) REFERENCES Patient,
 FOREIGN KEY (Doctor_ID) REFERENCES Doctor
 );
 
+
+CREATE VIEW Registration_DrRoomFees AS
+SELECT Reg.Patient_ID as 'Patient_ID', Reg.Date, Reg.Reserved_Time_Slot, REg.RegID as 'Registration_ID', D.Salary as 'Doctor_Fees', R.Price as 'Room_Price'
+FROM Registration as Reg, Room as R, Doctor as D
+WHERE Reg.Doctor_ID = D.DID AND Reg.Room_ID = R.RID AND Reg.Room_ID = R.RID
+
+CREATE VIEW Registration_MedPrices AS 
+SELECT Reg.RegID as 'Registration_ID', SUM(M.Price) as 'Medications_Price'
+FROM Registration as Reg, Medication as M, Prescribed_Medications as PM
+WHERE PM.Registration_ID = Reg.RegID AND PM.Medication_ID = M.MID
+GROUP BY Reg.RegID
+
+CREATE VIEW Registration_ScanPrices AS
+SELECT Reg.RegID as 'Registration_ID', SUM(S.Price) as 'Scans_Price'
+FROM Registration as Reg, Scan as S, Ordered_Scans as OS
+WHERE OS.Registration_ID = Reg.RegID AND OS.Scan_ID = S.SID
+GROUP BY Reg.RegID
+
+CREATE VIEW Registration_Bills AS
+SELECT Patient_ID, Date, Reserved_Time_Slot as 'Time Slot', D.Registration_ID as 'Registration ID', Doctor_Fees as 'Doctor Fees', Room_Price as 'Room Price', Medications_Price as 'Medications Price', Scans_Price as 'Scans Price'
+FROM (Registration_MedPrices as M FULL OUTER JOIN Registration_ScanPrices as S ON (M.Registration_ID = S.Registration_ID)) FULL OUTER JOIN Registration_DrRoomFees as D ON (M.Registration_ID = D.Registration_ID)
+
+
+
 insert into Patient(Name,Username,Password,Gender,Age,Mobile_Number,Address)
 values
 ('Mohamad', 'M16','1234', 'M',5,'01145585123','doky'),
@@ -206,11 +231,11 @@ Values
 ('vitamins',90,'2090-04-19')
 
 
-insert into Room(Type,Size,Price,Department_ID,Room_Availability) 
+insert into Room(Type,Size,Price,Department_ID) 
 Values
-('Examination Room',40,900,1,0),
-('Examination Room',50,800,2,1),
-('Examination Room',35,950,3,0)
+('Examination Room',40,900,1),
+('Examination Room',50,800,2),
+('Examination Room',35,950,3)
 
 
 insert into Registration(Reciptionist_ID,Doctor_ID,Patient_ID,Room_ID,Date,Reserved_Time_Slot,State,Diagnosis,Comments)

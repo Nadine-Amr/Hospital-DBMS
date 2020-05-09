@@ -28,13 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.shiftEndNumericUpDown = new System.Windows.Forms.NumericUpDown();
-            this.shiftStartNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.genderGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.femaleRadioButton = new System.Windows.Forms.RadioButton();
+            this.maleRadioButton = new System.Windows.Forms.RadioButton();
             this.ageNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.addressTextBox = new System.Windows.Forms.TextBox();
@@ -50,115 +46,55 @@
             this.upd_info_button = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.shiftEndNumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shiftStartNumericUpDown)).BeginInit();
+            this.AMPMcomboBox2 = new System.Windows.Forms.ComboBox();
+            this.AMPMcomboBox1 = new System.Windows.Forms.ComboBox();
+            this.shiftStartNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.shiftEndNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.genderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ageNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftStartNumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftEndNumericUpDown)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label8.Location = new System.Drawing.Point(240, 263);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(89, 20);
-            this.label8.TabIndex = 87;
-            this.label8.Text = "Shift Start:";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label9.Location = new System.Drawing.Point(446, 262);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(82, 20);
-            this.label9.TabIndex = 89;
-            this.label9.Text = "Shift End:";
-            // 
-            // shiftEndNumericUpDown
-            // 
-            this.shiftEndNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.shiftEndNumericUpDown.Location = new System.Drawing.Point(557, 259);
-            this.shiftEndNumericUpDown.Maximum = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            this.shiftEndNumericUpDown.Minimum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.shiftEndNumericUpDown.Name = "shiftEndNumericUpDown";
-            this.shiftEndNumericUpDown.Size = new System.Drawing.Size(46, 26);
-            this.shiftEndNumericUpDown.TabIndex = 90;
-            this.shiftEndNumericUpDown.Value = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            // 
-            // shiftStartNumericUpDown
-            // 
-            this.shiftStartNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.shiftStartNumericUpDown.Location = new System.Drawing.Point(352, 259);
-            this.shiftStartNumericUpDown.Maximum = new decimal(new int[] {
-            18,
-            0,
-            0,
-            0});
-            this.shiftStartNumericUpDown.Minimum = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
-            this.shiftStartNumericUpDown.Name = "shiftStartNumericUpDown";
-            this.shiftStartNumericUpDown.Size = new System.Drawing.Size(46, 26);
-            this.shiftStartNumericUpDown.TabIndex = 91;
-            this.shiftStartNumericUpDown.Value = new decimal(new int[] {
-            8,
-            0,
-            0,
-            0});
             // 
             // genderGroupBox
             // 
-            this.genderGroupBox.Controls.Add(this.radioButton1);
-            this.genderGroupBox.Controls.Add(this.radioButton2);
+            this.genderGroupBox.Controls.Add(this.femaleRadioButton);
+            this.genderGroupBox.Controls.Add(this.maleRadioButton);
             this.genderGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.genderGroupBox.Location = new System.Drawing.Point(438, 35);
             this.genderGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.genderGroupBox.Name = "genderGroupBox";
             this.genderGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.genderGroupBox.Size = new System.Drawing.Size(230, 49);
+            this.genderGroupBox.Size = new System.Drawing.Size(242, 49);
             this.genderGroupBox.TabIndex = 107;
             this.genderGroupBox.TabStop = false;
             this.genderGroupBox.Text = "Gender";
             // 
-            // radioButton1
+            // femaleRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(146, 14);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 24);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Female";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.femaleRadioButton.AutoSize = true;
+            this.femaleRadioButton.Location = new System.Drawing.Point(146, 14);
+            this.femaleRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.femaleRadioButton.Name = "femaleRadioButton";
+            this.femaleRadioButton.Size = new System.Drawing.Size(85, 24);
+            this.femaleRadioButton.TabIndex = 1;
+            this.femaleRadioButton.TabStop = true;
+            this.femaleRadioButton.Text = "Female";
+            this.femaleRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // maleRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(72, 14);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(66, 24);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Male";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.maleRadioButton.AutoSize = true;
+            this.maleRadioButton.Location = new System.Drawing.Point(72, 14);
+            this.maleRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.maleRadioButton.Name = "maleRadioButton";
+            this.maleRadioButton.Size = new System.Drawing.Size(66, 24);
+            this.maleRadioButton.TabIndex = 0;
+            this.maleRadioButton.TabStop = true;
+            this.maleRadioButton.Text = "Male";
+            this.maleRadioButton.UseVisualStyleBackColor = true;
             // 
             // ageNumericUpDown
             // 
@@ -276,6 +212,7 @@
             this.upd_info_button.TabIndex = 94;
             this.upd_info_button.Text = "Update Info";
             this.upd_info_button.UseVisualStyleBackColor = true;
+            this.upd_info_button.Click += new System.EventHandler(this.upd_info_button_Click);
             // 
             // label2
             // 
@@ -297,15 +234,103 @@
             this.label1.TabIndex = 92;
             this.label1.Text = "Name:";
             // 
+            // AMPMcomboBox2
+            // 
+            this.AMPMcomboBox2.FormattingEnabled = true;
+            this.AMPMcomboBox2.Location = new System.Drawing.Point(590, 265);
+            this.AMPMcomboBox2.Name = "AMPMcomboBox2";
+            this.AMPMcomboBox2.Size = new System.Drawing.Size(57, 24);
+            this.AMPMcomboBox2.TabIndex = 147;
+            // 
+            // AMPMcomboBox1
+            // 
+            this.AMPMcomboBox1.FormattingEnabled = true;
+            this.AMPMcomboBox1.Location = new System.Drawing.Point(374, 266);
+            this.AMPMcomboBox1.Name = "AMPMcomboBox1";
+            this.AMPMcomboBox1.Size = new System.Drawing.Size(58, 24);
+            this.AMPMcomboBox1.TabIndex = 146;
+            // 
+            // shiftStartNumericUpDown
+            // 
+            this.shiftStartNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.shiftStartNumericUpDown.Location = new System.Drawing.Point(312, 265);
+            this.shiftStartNumericUpDown.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.shiftStartNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.shiftStartNumericUpDown.Name = "shiftStartNumericUpDown";
+            this.shiftStartNumericUpDown.Size = new System.Drawing.Size(51, 26);
+            this.shiftStartNumericUpDown.TabIndex = 145;
+            this.shiftStartNumericUpDown.Value = new decimal(new int[] {
+            8,
+            0,
+            0,
+            0});
+            // 
+            // shiftEndNumericUpDown
+            // 
+            this.shiftEndNumericUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.shiftEndNumericUpDown.Location = new System.Drawing.Point(529, 264);
+            this.shiftEndNumericUpDown.Maximum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
+            this.shiftEndNumericUpDown.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.shiftEndNumericUpDown.Name = "shiftEndNumericUpDown";
+            this.shiftEndNumericUpDown.Size = new System.Drawing.Size(52, 26);
+            this.shiftEndNumericUpDown.TabIndex = 144;
+            this.shiftEndNumericUpDown.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.Location = new System.Drawing.Point(441, 267);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(82, 20);
+            this.label9.TabIndex = 143;
+            this.label9.Text = "Shift End:";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label8.Location = new System.Drawing.Point(216, 269);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(89, 20);
+            this.label8.TabIndex = 142;
+            this.label8.Text = "Shift Start:";
+            // 
             // D_UpdateInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(883, 484);
+            this.Controls.Add(this.AMPMcomboBox2);
             this.Controls.Add(this.genderGroupBox);
+            this.Controls.Add(this.AMPMcomboBox1);
+            this.Controls.Add(this.shiftStartNumericUpDown);
             this.Controls.Add(this.ageNumericUpDown);
+            this.Controls.Add(this.shiftEndNumericUpDown);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.addressTextBox);
+            this.Controls.Add(this.label8);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.mobileNumTextBox);
             this.Controls.Add(this.label5);
@@ -318,30 +343,22 @@
             this.Controls.Add(this.upd_info_button);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.shiftStartNumericUpDown);
-            this.Controls.Add(this.shiftEndNumericUpDown);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Name = "D_UpdateInfo";
             this.Text = "D_UpdateInfo";
-            ((System.ComponentModel.ISupportInitialize)(this.shiftEndNumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.shiftStartNumericUpDown)).EndInit();
             this.genderGroupBox.ResumeLayout(false);
             this.genderGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ageNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftStartNumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.shiftEndNumericUpDown)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.NumericUpDown shiftEndNumericUpDown;
-        private System.Windows.Forms.NumericUpDown shiftStartNumericUpDown;
         private System.Windows.Forms.GroupBox genderGroupBox;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton femaleRadioButton;
+        private System.Windows.Forms.RadioButton maleRadioButton;
         private System.Windows.Forms.NumericUpDown ageNumericUpDown;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox addressTextBox;
@@ -357,5 +374,11 @@
         private System.Windows.Forms.Button upd_info_button;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox AMPMcomboBox2;
+        private System.Windows.Forms.ComboBox AMPMcomboBox1;
+        private System.Windows.Forms.NumericUpDown shiftStartNumericUpDown;
+        private System.Windows.Forms.NumericUpDown shiftEndNumericUpDown;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
     }
 }

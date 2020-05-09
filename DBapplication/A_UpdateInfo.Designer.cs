@@ -74,6 +74,7 @@
             this.upd_info_button.TabIndex = 46;
             this.upd_info_button.Text = "Update Info";
             this.upd_info_button.UseVisualStyleBackColor = true;
+            this.upd_info_button.Click += new System.EventHandler(this.upd_info_button_Click);
             // 
             // label2
             // 

@@ -43,18 +43,22 @@ namespace DBapplication
         {
             if (nameTextBox.Text == "" || usernameTextBox.Text == "" || passwordTextBox.Text == "")
             {
-                MessageBox.Show("Please, insert all specified values");
+                MessageBox.Show("Please, insert all specified values.");
             }
             else
             {
                 int r = controllerObj.A_AddAdmin(nameTextBox.Text.ToString(), usernameTextBox.Text.ToString(), passwordTextBox.Text.ToString());
                 if (r > 0)
                 {
-                    MessageBox.Show("Admin added successfully");
+                    MessageBox.Show("Admin added successfully.");
+                    DataTable dt = controllerObj.SelectAdmin_name_id();
+                    adminsComboBox.DataSource = dt;
+                    adminsComboBox.DisplayMember = "Name";
+                    adminsComboBox.ValueMember = "AID";
                 }
                 else
                 {
-                    MessageBox.Show("Error in adding Admin");
+                    MessageBox.Show("Error in adding admin.");
                 }
             }
         }
@@ -63,7 +67,7 @@ namespace DBapplication
         {
             if (nameTextBox.Text == "" || usernameTextBox.Text == "" || passwordTextBox.Text == "")
             {
-                MessageBox.Show("Please, insert all specified values");
+                MessageBox.Show("Please, insert all specified values.");
             }
             else
             {
@@ -72,30 +76,25 @@ namespace DBapplication
                 if (r > 0)
                 {
                     MessageBox.Show("Admin updated successfully");
+                    DataTable dt = controllerObj.SelectAdmin_name_id();
+                    adminsComboBox.DataSource = dt;
+                    adminsComboBox.DisplayMember = "Name";
+                    adminsComboBox.ValueMember = "AID";
                 }
                 else
                 {
-                    MessageBox.Show("Error in updating Admin");
+                    MessageBox.Show("Error in updating admin.");
                 }
             }
         }
 
-        private void adminsComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (adminsComboBox.SelectedIndex == -1)
-            {
-                nameTextBox.Text = string.Empty;
-                usernameTextBox.Text = string.Empty;
-                passwordTextBox.Text = string.Empty;
-            }
-            else
-            {
-                /*DataRow Admin = controllerObj.SelectAdmin(adminsComboBox.SelectedValue.ToString()).Rows[0];
-                nameTextBox.Text = (string) Admin["Name"];
-                usernameTextBox.Text = (string)Admin["Username"];
-                passwordTextBox.Text = (string)Admin["Password"];*/
 
-            }
+        private void choseAdminToUpdateButton_Click(object sender, EventArgs e)
+        {
+            DataRow Admin = controllerObj.SelectAdmin(Convert.ToInt32(adminsComboBox.SelectedValue)).Rows[0];
+            nameTextBox.Text = (string)Admin["Name"];
+            usernameTextBox.Text = (string)Admin["Username"];
+            passwordTextBox.Text = (string)Admin["Password"];
         }
     }
 }

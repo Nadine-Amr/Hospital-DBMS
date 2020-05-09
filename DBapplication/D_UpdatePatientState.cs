@@ -18,7 +18,7 @@ namespace DBapplication
         {
             InitializeComponent();
             this._did = did;
-            StateComboBox.Items.Add("Waiting");
+
             StateComboBox.Items.Add("Being Examined");
             StateComboBox.Items.Add("Getting Scans");
             StateComboBox.Items.Add("Buying Medications");
@@ -44,7 +44,7 @@ namespace DBapplication
         {
             if(StateComboBox.Text =="")
             {
-                MessageBox.Show("Please Choose A State");
+                MessageBox.Show("Please choose s state.");
             }
             else
             {
@@ -52,14 +52,14 @@ namespace DBapplication
                 
                 if(result >0)
                 {
-                    MessageBox.Show("The patient's state has been successfuly Updated");
+                    MessageBox.Show("The patient's state has been successfuly updated.");
                     DataTable dt3 = controllerObj.SelectNonReleasedPatients(_did);
                     PatientComboBox.DataSource = dt3;
                     PatientComboBox.DisplayMember = "Name";
                 }
                 else
                 {
-                    MessageBox.Show("There was an error with updating the patient's State");
+                    MessageBox.Show("There was an error with updating the patient's state.");
                 }
             }
             

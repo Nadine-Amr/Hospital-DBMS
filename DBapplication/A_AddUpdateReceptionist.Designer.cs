@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.genderGroupBox = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.femaleRadioButton = new System.Windows.Forms.RadioButton();
+            this.maleRadioButton = new System.Windows.Forms.RadioButton();
             this.ageNumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
             this.addressTextBox = new System.Windows.Forms.TextBox();
@@ -45,12 +45,12 @@
             this.back_button = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.recepsComboBox = new System.Windows.Forms.ComboBox();
             this.add_recep_button = new System.Windows.Forms.Button();
             this.upd_recep_button = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.salaryNumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.chooseRecepToUpdButton = new System.Windows.Forms.Button();
             this.genderGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ageNumericUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.salaryNumericUpDown)).BeginInit();
@@ -58,41 +58,41 @@
             // 
             // genderGroupBox
             // 
-            this.genderGroupBox.Controls.Add(this.radioButton1);
-            this.genderGroupBox.Controls.Add(this.radioButton2);
+            this.genderGroupBox.Controls.Add(this.femaleRadioButton);
+            this.genderGroupBox.Controls.Add(this.maleRadioButton);
             this.genderGroupBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.genderGroupBox.Location = new System.Drawing.Point(455, 105);
             this.genderGroupBox.Margin = new System.Windows.Forms.Padding(4);
             this.genderGroupBox.Name = "genderGroupBox";
             this.genderGroupBox.Padding = new System.Windows.Forms.Padding(4);
-            this.genderGroupBox.Size = new System.Drawing.Size(230, 49);
+            this.genderGroupBox.Size = new System.Drawing.Size(242, 49);
             this.genderGroupBox.TabIndex = 104;
             this.genderGroupBox.TabStop = false;
             this.genderGroupBox.Text = "Gender";
             // 
-            // radioButton1
+            // femaleRadioButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(146, 14);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(85, 24);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Female";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.femaleRadioButton.AutoSize = true;
+            this.femaleRadioButton.Location = new System.Drawing.Point(146, 14);
+            this.femaleRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.femaleRadioButton.Name = "femaleRadioButton";
+            this.femaleRadioButton.Size = new System.Drawing.Size(85, 24);
+            this.femaleRadioButton.TabIndex = 1;
+            this.femaleRadioButton.TabStop = true;
+            this.femaleRadioButton.Text = "Female";
+            this.femaleRadioButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // maleRadioButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(72, 14);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(66, 24);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Male";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.maleRadioButton.AutoSize = true;
+            this.maleRadioButton.Location = new System.Drawing.Point(72, 14);
+            this.maleRadioButton.Margin = new System.Windows.Forms.Padding(4);
+            this.maleRadioButton.Name = "maleRadioButton";
+            this.maleRadioButton.Size = new System.Drawing.Size(66, 24);
+            this.maleRadioButton.TabIndex = 0;
+            this.maleRadioButton.TabStop = true;
+            this.maleRadioButton.Text = "Male";
+            this.maleRadioButton.UseVisualStyleBackColor = true;
             // 
             // ageNumericUpDown
             // 
@@ -222,16 +222,6 @@
             this.label1.TabIndex = 89;
             this.label1.Text = "Name:";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label6.Location = new System.Drawing.Point(203, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(246, 20);
-            this.label6.TabIndex = 108;
-            this.label6.Text = "Choose Receptionist to Update:";
-            // 
             // recepsComboBox
             // 
             this.recepsComboBox.FormattingEnabled = true;
@@ -242,21 +232,23 @@
             // 
             // add_recep_button
             // 
-            this.add_recep_button.Location = new System.Drawing.Point(306, 436);
+            this.add_recep_button.Location = new System.Drawing.Point(280, 436);
             this.add_recep_button.Name = "add_recep_button";
-            this.add_recep_button.Size = new System.Drawing.Size(149, 25);
+            this.add_recep_button.Size = new System.Drawing.Size(175, 25);
             this.add_recep_button.TabIndex = 110;
             this.add_recep_button.Text = "Add Receptionist";
             this.add_recep_button.UseVisualStyleBackColor = true;
+            this.add_recep_button.Click += new System.EventHandler(this.add_recep_button_Click);
             // 
             // upd_recep_button
             // 
             this.upd_recep_button.Location = new System.Drawing.Point(461, 436);
             this.upd_recep_button.Name = "upd_recep_button";
-            this.upd_recep_button.Size = new System.Drawing.Size(147, 25);
+            this.upd_recep_button.Size = new System.Drawing.Size(175, 25);
             this.upd_recep_button.TabIndex = 109;
             this.upd_recep_button.Text = "Update Receptionist";
             this.upd_recep_button.UseVisualStyleBackColor = true;
+            this.upd_recep_button.Click += new System.EventHandler(this.upd_recep_button_Click);
             // 
             // label9
             // 
@@ -282,16 +274,26 @@
             this.salaryNumericUpDown.Size = new System.Drawing.Size(213, 26);
             this.salaryNumericUpDown.TabIndex = 118;
             // 
+            // chooseRecepToUpdButton
+            // 
+            this.chooseRecepToUpdButton.Location = new System.Drawing.Point(192, 37);
+            this.chooseRecepToUpdButton.Name = "chooseRecepToUpdButton";
+            this.chooseRecepToUpdButton.Size = new System.Drawing.Size(228, 25);
+            this.chooseRecepToUpdButton.TabIndex = 140;
+            this.chooseRecepToUpdButton.Text = "Choose Receptionist to Update:";
+            this.chooseRecepToUpdButton.UseVisualStyleBackColor = true;
+            this.chooseRecepToUpdButton.Click += new System.EventHandler(this.chooseRecepToUpdButton_Click);
+            // 
             // A_AddUpdateReceptionist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(916, 583);
+            this.Controls.Add(this.chooseRecepToUpdButton);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.salaryNumericUpDown);
             this.Controls.Add(this.add_recep_button);
             this.Controls.Add(this.upd_recep_button);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.recepsComboBox);
             this.Controls.Add(this.genderGroupBox);
             this.Controls.Add(this.ageNumericUpDown);
@@ -322,8 +324,8 @@
         #endregion
 
         private System.Windows.Forms.GroupBox genderGroupBox;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton femaleRadioButton;
+        private System.Windows.Forms.RadioButton maleRadioButton;
         private System.Windows.Forms.NumericUpDown ageNumericUpDown;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox addressTextBox;
@@ -338,11 +340,11 @@
         private System.Windows.Forms.Button back_button;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox recepsComboBox;
         private System.Windows.Forms.Button add_recep_button;
         private System.Windows.Forms.Button upd_recep_button;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown salaryNumericUpDown;
+        private System.Windows.Forms.Button chooseRecepToUpdButton;
     }
 }

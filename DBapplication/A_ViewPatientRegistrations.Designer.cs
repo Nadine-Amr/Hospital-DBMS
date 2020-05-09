@@ -41,7 +41,7 @@
             // 
             this.patientRegistrationGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.patientRegistrationGridView.Location = new System.Drawing.Point(48, 65);
-            this.patientRegistrationGridView.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.patientRegistrationGridView.Margin = new System.Windows.Forms.Padding(4);
             this.patientRegistrationGridView.Name = "patientRegistrationGridView";
             this.patientRegistrationGridView.RowHeadersWidth = 51;
             this.patientRegistrationGridView.Size = new System.Drawing.Size(359, 185);
@@ -50,7 +50,7 @@
             // PatientRegistrationCombobox
             // 
             this.PatientRegistrationCombobox.FormattingEnabled = true;
-            this.PatientRegistrationCombobox.Location = new System.Drawing.Point(176, 18);
+            this.PatientRegistrationCombobox.Location = new System.Drawing.Point(190, 18);
             this.PatientRegistrationCombobox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.PatientRegistrationCombobox.Name = "PatientRegistrationCombobox";
             this.PatientRegistrationCombobox.Size = new System.Drawing.Size(209, 24);
@@ -60,11 +60,11 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(44, 23);
+            this.label1.Location = new System.Drawing.Point(58, 23);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 20);
+            this.label1.Size = new System.Drawing.Size(115, 20);
             this.label1.TabIndex = 106;
-            this.label1.Text = "Patient Name";
+            this.label1.Text = "Patient Name:";
             // 
             // logout_button
             // 
@@ -90,13 +90,14 @@
             // 
             // view_registration_btn
             // 
-            this.view_registration_btn.Location = new System.Drawing.Point(156, 272);
+            this.view_registration_btn.Location = new System.Drawing.Point(117, 272);
             this.view_registration_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.view_registration_btn.Name = "view_registration_btn";
-            this.view_registration_btn.Size = new System.Drawing.Size(139, 33);
+            this.view_registration_btn.Size = new System.Drawing.Size(216, 33);
             this.view_registration_btn.TabIndex = 103;
-            this.view_registration_btn.Text = "View Regestration";
+            this.view_registration_btn.Text = "View Regestrations";
             this.view_registration_btn.UseVisualStyleBackColor = true;
+            this.view_registration_btn.Click += new System.EventHandler(this.view_registration_btn_Click);
             // 
             // A_ViewPatientRegistrations
             // 
@@ -109,9 +110,10 @@
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.back_button);
             this.Controls.Add(this.view_registration_btn);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "A_ViewPatientRegistrations";
             this.Text = "A_ViewPatientRegistrations";
+            this.Load += new System.EventHandler(this.A_ViewPatientRegistrations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.patientRegistrationGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

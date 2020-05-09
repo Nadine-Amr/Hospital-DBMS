@@ -22,9 +22,11 @@ namespace DBapplication
         {
             InitializeComponent();
             this._did = did;
+
             DataTable dt1 = controllerObj.SelectMedications();
             MedicationComboBox.DataSource = dt1;
             MedicationComboBox.DisplayMember = "Name";
+
             DataTable dt2 = controllerObj.SelectNonReleasedPatients(_did);
             PatientComboBox.DataSource = dt2;
             PatientComboBox.DisplayMember = "Name";
@@ -51,18 +53,18 @@ namespace DBapplication
             {
                 if(DosageTextBox.Text.Length == 0)
                 {
-                    MessageBox.Show("Please insert a Dosage");
+                    MessageBox.Show("Please insert a dosage or unckeck it checkbox.");
                 }
                 else
                 {
                     result = controllerObj.DAssignMedications(_did, PatientComboBox.Text, MedicationComboBox.Text, DosageTextBox.Text);
                     if (result > 0)
                     {
-                        MessageBox.Show("the medication has been successfully assigned");
+                        MessageBox.Show("The medication has been successfully assigned.");
                     }
                     else
                     {
-                        MessageBox.Show("error the medication has failed to be assigned");
+                        MessageBox.Show("Error: Failed to assign the medication.");
                     }
                 }
             }
@@ -71,13 +73,12 @@ namespace DBapplication
                 result = controllerObj.DAssignMedications(_did, PatientComboBox.Text, MedicationComboBox.Text);
                 if (result > 0)
                 {
-                    MessageBox.Show("the medication has been successfully assigned");
+                    MessageBox.Show("The medication has been successfully assigned.");
                 }
                 else
                 {
-                    MessageBox.Show("error the medication has failed to be assigned");
+                    MessageBox.Show("Error: Failed to assign the medication.");
                 }
-
             }
         }
     }

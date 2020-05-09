@@ -52,14 +52,23 @@ namespace DBapplication
         private void rate_doctor_btn_Click(object sender, EventArgs e)
         {
             int result = controllerObj.InsertDoctorRate(_pid, DoctorID, (int)RateNumericUpDown.Value);
-            if (result >0)
+
+            DataRow avgRating = controllerObj.GetDrAvgRating((int)DoctorID).Rows[0];
+            controllerObj.UpdateDrAvgRating((int)DoctorID, (double)avgRating["Avg_Rating"]);
+
+            if (result > 0)
             {
-                MessageBox.Show("Thanks For Rating We appreciate it");
+                MessageBox.Show("Thanks for rating; we appreciate it.");
             }
             else
             {
-                MessageBox.Show("Sorry, there was an error with submitting your rate");
+                MessageBox.Show("Sorry, there was an error with submitting your rate.");
             }
+        }
+
+        private void P_RateDoctor_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
