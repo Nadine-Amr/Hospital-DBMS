@@ -30,5 +30,30 @@ namespace DBapplication
             new Login().Show();
             this.Close();
         }
+
+        private void A_AddUpdateRoom_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoomTypeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RoomSizeTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

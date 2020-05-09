@@ -75,6 +75,7 @@
             this.genderGroupBox.TabIndex = 127;
             this.genderGroupBox.TabStop = false;
             this.genderGroupBox.Text = "Gender";
+            this.genderGroupBox.Enter += new System.EventHandler(this.genderGroupBox_Enter);
             // 
             // radioButton1
             // 
@@ -90,6 +91,7 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
+            this.radioButton2.Checked = true;
             this.radioButton2.Location = new System.Drawing.Point(54, 11);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(56, 21);
