@@ -44,13 +44,15 @@
             this.gen_stat_rep_button = new System.Windows.Forms.Button();
             this.view_pres_med_button = new System.Windows.Forms.Button();
             this.personnel_search_button = new System.Windows.Forms.Button();
+            this.ReportViewButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // add_upd_scan_button
             // 
-            this.add_upd_scan_button.Location = new System.Drawing.Point(68, 316);
+            this.add_upd_scan_button.Location = new System.Drawing.Point(51, 257);
+            this.add_upd_scan_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_upd_scan_button.Name = "add_upd_scan_button";
-            this.add_upd_scan_button.Size = new System.Drawing.Size(205, 27);
+            this.add_upd_scan_button.Size = new System.Drawing.Size(154, 22);
             this.add_upd_scan_button.TabIndex = 28;
             this.add_upd_scan_button.Text = "Add/Update Scan";
             this.add_upd_scan_button.UseVisualStyleBackColor = true;
@@ -58,9 +60,10 @@
             // 
             // add_upd_recep_button
             // 
-            this.add_upd_recep_button.Location = new System.Drawing.Point(68, 163);
+            this.add_upd_recep_button.Location = new System.Drawing.Point(51, 132);
+            this.add_upd_recep_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_upd_recep_button.Name = "add_upd_recep_button";
-            this.add_upd_recep_button.Size = new System.Drawing.Size(205, 27);
+            this.add_upd_recep_button.Size = new System.Drawing.Size(154, 22);
             this.add_upd_recep_button.TabIndex = 27;
             this.add_upd_recep_button.Text = "Add/Update Receptionist";
             this.add_upd_recep_button.UseVisualStyleBackColor = true;
@@ -70,17 +73,19 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label1.Location = new System.Drawing.Point(225, 34);
+            this.label1.Location = new System.Drawing.Point(169, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(173, 25);
+            this.label1.Size = new System.Drawing.Size(136, 20);
             this.label1.TabIndex = 26;
             this.label1.Text = "Available Services";
             // 
             // logout_button
             // 
-            this.logout_button.Location = new System.Drawing.Point(252, 395);
+            this.logout_button.Location = new System.Drawing.Point(189, 321);
+            this.logout_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logout_button.Name = "logout_button";
-            this.logout_button.Size = new System.Drawing.Size(105, 27);
+            this.logout_button.Size = new System.Drawing.Size(79, 22);
             this.logout_button.TabIndex = 25;
             this.logout_button.Text = "Logout";
             this.logout_button.UseVisualStyleBackColor = true;
@@ -88,9 +93,10 @@
             // 
             // add_upd_dep_button
             // 
-            this.add_upd_dep_button.Location = new System.Drawing.Point(68, 217);
+            this.add_upd_dep_button.Location = new System.Drawing.Point(51, 176);
+            this.add_upd_dep_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_upd_dep_button.Name = "add_upd_dep_button";
-            this.add_upd_dep_button.Size = new System.Drawing.Size(205, 27);
+            this.add_upd_dep_button.Size = new System.Drawing.Size(154, 22);
             this.add_upd_dep_button.TabIndex = 23;
             this.add_upd_dep_button.Text = "Add/Update Department";
             this.add_upd_dep_button.UseVisualStyleBackColor = true;
@@ -98,9 +104,10 @@
             // 
             // add_upd_room_button
             // 
-            this.add_upd_room_button.Location = new System.Drawing.Point(68, 250);
+            this.add_upd_room_button.Location = new System.Drawing.Point(51, 203);
+            this.add_upd_room_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_upd_room_button.Name = "add_upd_room_button";
-            this.add_upd_room_button.Size = new System.Drawing.Size(205, 27);
+            this.add_upd_room_button.Size = new System.Drawing.Size(154, 22);
             this.add_upd_room_button.TabIndex = 22;
             this.add_upd_room_button.Text = "Add/Update Room";
             this.add_upd_room_button.UseVisualStyleBackColor = true;
@@ -108,9 +115,10 @@
             // 
             // add_upd_admin_button
             // 
-            this.add_upd_admin_button.Location = new System.Drawing.Point(68, 97);
+            this.add_upd_admin_button.Location = new System.Drawing.Point(51, 79);
+            this.add_upd_admin_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_upd_admin_button.Name = "add_upd_admin_button";
-            this.add_upd_admin_button.Size = new System.Drawing.Size(205, 27);
+            this.add_upd_admin_button.Size = new System.Drawing.Size(154, 22);
             this.add_upd_admin_button.TabIndex = 21;
             this.add_upd_admin_button.Text = "Add/Update Admin";
             this.add_upd_admin_button.UseVisualStyleBackColor = true;
@@ -118,9 +126,10 @@
             // 
             // add_upd_med_button
             // 
-            this.add_upd_med_button.Location = new System.Drawing.Point(68, 283);
+            this.add_upd_med_button.Location = new System.Drawing.Point(51, 230);
+            this.add_upd_med_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_upd_med_button.Name = "add_upd_med_button";
-            this.add_upd_med_button.Size = new System.Drawing.Size(205, 27);
+            this.add_upd_med_button.Size = new System.Drawing.Size(154, 22);
             this.add_upd_med_button.TabIndex = 20;
             this.add_upd_med_button.Text = "Add/Update Medication";
             this.add_upd_med_button.UseVisualStyleBackColor = true;
@@ -128,9 +137,10 @@
             // 
             // add_upd_dr_button
             // 
-            this.add_upd_dr_button.Location = new System.Drawing.Point(68, 130);
+            this.add_upd_dr_button.Location = new System.Drawing.Point(51, 106);
+            this.add_upd_dr_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.add_upd_dr_button.Name = "add_upd_dr_button";
-            this.add_upd_dr_button.Size = new System.Drawing.Size(205, 27);
+            this.add_upd_dr_button.Size = new System.Drawing.Size(154, 22);
             this.add_upd_dr_button.TabIndex = 19;
             this.add_upd_dr_button.Text = "Add/Update Doctor";
             this.add_upd_dr_button.UseVisualStyleBackColor = true;
@@ -138,9 +148,10 @@
             // 
             // view_pat_reg_button
             // 
-            this.view_pat_reg_button.Location = new System.Drawing.Point(338, 88);
+            this.view_pat_reg_button.Location = new System.Drawing.Point(254, 72);
+            this.view_pat_reg_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_pat_reg_button.Name = "view_pat_reg_button";
-            this.view_pat_reg_button.Size = new System.Drawing.Size(205, 27);
+            this.view_pat_reg_button.Size = new System.Drawing.Size(154, 22);
             this.view_pat_reg_button.TabIndex = 35;
             this.view_pat_reg_button.Text = "View Patient Registrations";
             this.view_pat_reg_button.UseVisualStyleBackColor = true;
@@ -148,9 +159,10 @@
             // 
             // view_dr_ratings_button
             // 
-            this.view_dr_ratings_button.Location = new System.Drawing.Point(338, 187);
+            this.view_dr_ratings_button.Location = new System.Drawing.Point(254, 152);
+            this.view_dr_ratings_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_dr_ratings_button.Name = "view_dr_ratings_button";
-            this.view_dr_ratings_button.Size = new System.Drawing.Size(205, 27);
+            this.view_dr_ratings_button.Size = new System.Drawing.Size(154, 22);
             this.view_dr_ratings_button.TabIndex = 34;
             this.view_dr_ratings_button.Text = "View Doctor Ratings";
             this.view_dr_ratings_button.UseVisualStyleBackColor = true;
@@ -158,9 +170,10 @@
             // 
             // view_ord_scans_button
             // 
-            this.view_ord_scans_button.Location = new System.Drawing.Point(338, 154);
+            this.view_ord_scans_button.Location = new System.Drawing.Point(254, 125);
+            this.view_ord_scans_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_ord_scans_button.Name = "view_ord_scans_button";
-            this.view_ord_scans_button.Size = new System.Drawing.Size(205, 27);
+            this.view_ord_scans_button.Size = new System.Drawing.Size(154, 22);
             this.view_ord_scans_button.TabIndex = 33;
             this.view_ord_scans_button.Text = "View Ordered Scans";
             this.view_ord_scans_button.UseVisualStyleBackColor = true;
@@ -168,9 +181,10 @@
             // 
             // upd_info_button
             // 
-            this.upd_info_button.Location = new System.Drawing.Point(338, 320);
+            this.upd_info_button.Location = new System.Drawing.Point(254, 260);
+            this.upd_info_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.upd_info_button.Name = "upd_info_button";
-            this.upd_info_button.Size = new System.Drawing.Size(205, 27);
+            this.upd_info_button.Size = new System.Drawing.Size(154, 22);
             this.upd_info_button.TabIndex = 32;
             this.upd_info_button.Text = "Update Info";
             this.upd_info_button.UseVisualStyleBackColor = true;
@@ -178,9 +192,10 @@
             // 
             // gen_stat_rep_button
             // 
-            this.gen_stat_rep_button.Location = new System.Drawing.Point(338, 270);
+            this.gen_stat_rep_button.Location = new System.Drawing.Point(254, 219);
+            this.gen_stat_rep_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.gen_stat_rep_button.Name = "gen_stat_rep_button";
-            this.gen_stat_rep_button.Size = new System.Drawing.Size(205, 27);
+            this.gen_stat_rep_button.Size = new System.Drawing.Size(154, 22);
             this.gen_stat_rep_button.TabIndex = 31;
             this.gen_stat_rep_button.Text = "Generate Statistical Reports";
             this.gen_stat_rep_button.UseVisualStyleBackColor = true;
@@ -188,9 +203,10 @@
             // 
             // view_pres_med_button
             // 
-            this.view_pres_med_button.Location = new System.Drawing.Point(338, 121);
+            this.view_pres_med_button.Location = new System.Drawing.Point(254, 98);
+            this.view_pres_med_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.view_pres_med_button.Name = "view_pres_med_button";
-            this.view_pres_med_button.Size = new System.Drawing.Size(205, 27);
+            this.view_pres_med_button.Size = new System.Drawing.Size(154, 22);
             this.view_pres_med_button.TabIndex = 30;
             this.view_pres_med_button.Text = "View Prescribed Medications";
             this.view_pres_med_button.UseVisualStyleBackColor = true;
@@ -198,19 +214,31 @@
             // 
             // personnel_search_button
             // 
-            this.personnel_search_button.Location = new System.Drawing.Point(338, 237);
+            this.personnel_search_button.Location = new System.Drawing.Point(254, 193);
+            this.personnel_search_button.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.personnel_search_button.Name = "personnel_search_button";
-            this.personnel_search_button.Size = new System.Drawing.Size(205, 27);
+            this.personnel_search_button.Size = new System.Drawing.Size(154, 22);
             this.personnel_search_button.TabIndex = 29;
             this.personnel_search_button.Text = "Personnel Search";
             this.personnel_search_button.UseVisualStyleBackColor = true;
             this.personnel_search_button.Click += new System.EventHandler(this.personnel_search_button_Click);
             // 
+            // ReportViewButton
+            // 
+            this.ReportViewButton.Location = new System.Drawing.Point(158, 293);
+            this.ReportViewButton.Name = "ReportViewButton";
+            this.ReportViewButton.Size = new System.Drawing.Size(147, 23);
+            this.ReportViewButton.TabIndex = 36;
+            this.ReportViewButton.Text = "ReportView";
+            this.ReportViewButton.UseVisualStyleBackColor = true;
+            this.ReportViewButton.Click += new System.EventHandler(this.ReportViewButton_Click);
+            // 
             // AdminServices
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(616, 450);
+            this.ClientSize = new System.Drawing.Size(462, 366);
+            this.Controls.Add(this.ReportViewButton);
             this.Controls.Add(this.view_pat_reg_button);
             this.Controls.Add(this.view_dr_ratings_button);
             this.Controls.Add(this.view_ord_scans_button);
@@ -227,6 +255,7 @@
             this.Controls.Add(this.add_upd_admin_button);
             this.Controls.Add(this.add_upd_med_button);
             this.Controls.Add(this.add_upd_dr_button);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminServices";
             this.Text = "AdminServices";
             this.ResumeLayout(false);
@@ -252,5 +281,6 @@
         private System.Windows.Forms.Button gen_stat_rep_button;
         private System.Windows.Forms.Button view_pres_med_button;
         private System.Windows.Forms.Button personnel_search_button;
+        private System.Windows.Forms.Button ReportViewButton;
     }
 }

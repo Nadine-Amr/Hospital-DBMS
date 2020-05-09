@@ -108,5 +108,11 @@ namespace DBapplication
             new A_UpdateInfo((long)_aid).Show();
             this.Close();
         }
+
+        private void ReportViewButton_Click(object sender, EventArgs e)
+        {
+            new ViewsAndStatisticsForm(_aid).Show();
+            this.Close();
+        }
     }
 }

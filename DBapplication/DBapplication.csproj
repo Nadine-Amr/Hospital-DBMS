@@ -52,9 +52,37 @@
     <StartupObject>DBapplication.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportingServices.Interfaces, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.Interfaces.1.0.0\lib\Microsoft.ReportingServices.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebDesign, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.WebForms.150.1404.0\lib\net40\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1404.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.1016.290\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -161,6 +189,12 @@
     <Compile Include="DoctorServices.Designer.cs">
       <DependentUpon>DoctorServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="DoctorStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorStat.Designer.cs">
+      <DependentUpon>DoctorStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="D_AssignMedication.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -211,11 +245,23 @@
     </Compile>
     <Compile Include="Controller.cs" />
     <Compile Include="DBManager.cs" />
+    <Compile Include="MedicineStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MedicineStat.Designer.cs">
+      <DependentUpon>MedicineStat.cs</DependentUpon>
+    </Compile>
     <Compile Include="PatientServices.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PatientServices.Designer.cs">
       <DependentUpon>PatientServices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="patientStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="patientStat.Designer.cs">
+      <DependentUpon>patientStat.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -255,6 +301,20 @@
     <Compile Include="ReceptionistServices.Designer.cs">
       <DependentUpon>ReceptionistServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecStat.Designer.cs">
+      <DependentUpon>RecStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDataSet.cs">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ReportDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="R_AddUpdatePatient.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +339,25 @@
     <Compile Include="R_UpdateInfo.Designer.cs">
       <DependentUpon>R_UpdateInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ScanStat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanStat.Designer.cs">
+      <DependentUpon>ScanStat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="ViewDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDoctors.Designer.cs">
+      <DependentUpon>ViewDoctors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewsAndStatisticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewsAndStatisticsForm.Designer.cs">
+      <DependentUpon>ViewsAndStatisticsForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AdminServices.resx">
       <DependentUpon>AdminServices.cs</DependentUpon>
     </EmbeddedResource>
@@ -299,6 +378,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorServices.resx">
       <DependentUpon>DoctorServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorStat.resx">
+      <DependentUpon>DoctorStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="D_AssignMedication.resx">
       <DependentUpon>D_AssignMedication.cs</DependentUpon>
@@ -321,8 +403,16 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="MedicineStat.resx">
+      <DependentUpon>MedicineStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedReport.rdlc" />
+    <EmbeddedResource Include="PatientReport.rdlc" />
     <EmbeddedResource Include="PatientServices.resx">
       <DependentUpon>PatientServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="patientStat.resx">
+      <DependentUpon>patientStat.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -345,6 +435,10 @@
     <EmbeddedResource Include="ReceptionistServices.resx">
       <DependentUpon>ReceptionistServices.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecReport.rdlc" />
+    <EmbeddedResource Include="RecStat.resx">
+      <DependentUpon>RecStat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="R_AddUpdatePatient.resx">
       <DependentUpon>R_AddUpdatePatient.cs</DependentUpon>
     </EmbeddedResource>
@@ -354,7 +448,19 @@
     <EmbeddedResource Include="R_UpdateInfo.resx">
       <DependentUpon>R_UpdateInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DoctorReport.rdlc" />
+    <EmbeddedResource Include="ScanReport.rdlc" />
+    <EmbeddedResource Include="ScanStat.resx">
+      <DependentUpon>ScanStat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDoctors.resx">
+      <DependentUpon>ViewDoctors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewsAndStatisticsForm.resx">
+      <DependentUpon>ViewsAndStatisticsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -364,6 +470,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ReportDataSet.xsc">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ReportDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ReportDataSet.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ReportDataSet.xss">
+      <DependentUpon>ReportDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -386,6 +503,21 @@
       <ProductName>Windows Installer 4.5</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
