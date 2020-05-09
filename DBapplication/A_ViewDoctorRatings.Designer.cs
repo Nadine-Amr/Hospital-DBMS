@@ -75,9 +75,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(437, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 20);
+            this.label1.Size = new System.Drawing.Size(114, 20);
             this.label1.TabIndex = 107;
-            this.label1.Text = "Doctor Name";
+            this.label1.Text = "Doctor Name:";
             // 
             // view_rate_btn
             // 

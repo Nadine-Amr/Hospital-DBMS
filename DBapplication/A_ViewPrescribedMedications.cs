@@ -12,11 +12,23 @@ namespace DBapplication
     public partial class A_ViewPrescribedMedications : Form
     {
         private long _aid;
+        Controller controllerObj;
 
         public A_ViewPrescribedMedications(long aid)
         {
             InitializeComponent();
             this._aid = aid;
+            controllerObj = new Controller();
+
+            DataTable dt1 = controllerObj.ViewPrescribedMeds();
+            AllPrescrbdMediGridView.DataSource = dt1;
+            AllPrescrbdMediGridView.Refresh();
+
+
+            DataTable dt2 = controllerObj.SelectMedsIDsNames();
+            MedCombobox.DataSource = dt2;
+            MedCombobox.DisplayMember = "Name";
+            MedCombobox.ValueMember = "MID";
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -48,7 +60,9 @@ namespace DBapplication
 
         private void view_orderScans_btn_Click(object sender, EventArgs e)
         {
-
+            DataTable dt3 = controllerObj.ViewMedPrescriptions(Convert.ToInt32(MedCombobox.SelectedValue));
+            one_med_pres_dataGridView.DataSource = dt3;
+            one_med_pres_dataGridView.Refresh();
         }
     }
 }

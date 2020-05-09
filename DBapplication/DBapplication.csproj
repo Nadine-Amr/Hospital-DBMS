@@ -285,11 +285,23 @@
     <EmbeddedResource Include="A_AddUpdateAdmin.resx">
       <DependentUpon>A_AddUpdateAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="A_AddUpdateDepartment.resx">
+      <DependentUpon>A_AddUpdateDepartment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="A_AddUpdateDoctor.resx">
       <DependentUpon>A_AddUpdateDoctor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="A_AddUpdateMedication.resx">
+      <DependentUpon>A_AddUpdateMedication.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="A_AddUpdateReceptionist.resx">
       <DependentUpon>A_AddUpdateReceptionist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AddUpdateRoom.resx">
+      <DependentUpon>A_AddUpdateRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="A_AddUpdateScan.resx">
+      <DependentUpon>A_AddUpdateScan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="A_UpdateInfo.resx">
       <DependentUpon>A_UpdateInfo.cs</DependentUpon>

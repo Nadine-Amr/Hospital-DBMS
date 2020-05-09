@@ -30,11 +30,11 @@
         {
             this.logout_button = new System.Windows.Forms.Button();
             this.back_button = new System.Windows.Forms.Button();
-            this.uod_state_button = new System.Windows.Forms.Button();
-            this.PatientComboBox = new System.Windows.Forms.ComboBox();
+            this.TypeComboBox = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.HistoryDataGridView = new System.Windows.Forms.DataGridView();
+            this.ViewHistButton = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // logout_button
@@ -59,61 +59,62 @@
             this.back_button.UseVisualStyleBackColor = true;
             this.back_button.Click += new System.EventHandler(this.back_button_Click);
             // 
-            // uod_state_button
+            // TypeComboBox
             // 
-            this.uod_state_button.Location = new System.Drawing.Point(153, 305);
-            this.uod_state_button.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.uod_state_button.Name = "uod_state_button";
-            this.uod_state_button.Size = new System.Drawing.Size(139, 25);
-            this.uod_state_button.TabIndex = 28;
-            this.uod_state_button.Text = "View History";
-            this.uod_state_button.UseVisualStyleBackColor = true;
-            // 
-            // PatientComboBox
-            // 
-            this.PatientComboBox.FormattingEnabled = true;
-            this.PatientComboBox.Location = new System.Drawing.Point(177, 54);
-            this.PatientComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.PatientComboBox.Name = "PatientComboBox";
-            this.PatientComboBox.Size = new System.Drawing.Size(209, 24);
-            this.PatientComboBox.TabIndex = 32;
+            this.TypeComboBox.FormattingEnabled = true;
+            this.TypeComboBox.Location = new System.Drawing.Point(177, 54);
+            this.TypeComboBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.TypeComboBox.Name = "TypeComboBox";
+            this.TypeComboBox.Size = new System.Drawing.Size(209, 24);
+            this.TypeComboBox.TabIndex = 32;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label1.Location = new System.Drawing.Point(55, 57);
+            this.label1.Location = new System.Drawing.Point(72, 57);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(98, 20);
+            this.label1.Size = new System.Drawing.Size(91, 20);
             this.label1.TabIndex = 31;
-            this.label1.Text = "History for :";
+            this.label1.Text = "History Of:";
             // 
-            // dataGridView1
+            // HistoryDataGridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(68, 103);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(320, 185);
-            this.dataGridView1.TabIndex = 33;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.HistoryDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.HistoryDataGridView.Location = new System.Drawing.Point(68, 103);
+            this.HistoryDataGridView.Margin = new System.Windows.Forms.Padding(4);
+            this.HistoryDataGridView.Name = "HistoryDataGridView";
+            this.HistoryDataGridView.RowHeadersWidth = 51;
+            this.HistoryDataGridView.Size = new System.Drawing.Size(320, 185);
+            this.HistoryDataGridView.TabIndex = 33;
+            this.HistoryDataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // ViewHistButton
+            // 
+            this.ViewHistButton.Location = new System.Drawing.Point(157, 308);
+            this.ViewHistButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.ViewHistButton.Name = "ViewHistButton";
+            this.ViewHistButton.Size = new System.Drawing.Size(139, 25);
+            this.ViewHistButton.TabIndex = 34;
+            this.ViewHistButton.Text = "View History";
+            this.ViewHistButton.UseVisualStyleBackColor = true;
+            this.ViewHistButton.Click += new System.EventHandler(this.ViewHistButton_Click);
             // 
             // P_ViewHistory
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 401);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.PatientComboBox);
+            this.Controls.Add(this.ViewHistButton);
+            this.Controls.Add(this.HistoryDataGridView);
+            this.Controls.Add(this.TypeComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.logout_button);
             this.Controls.Add(this.back_button);
-            this.Controls.Add(this.uod_state_button);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "P_ViewHistory";
             this.Text = "P_ViewHistory";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.HistoryDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,9 +124,9 @@
 
         private System.Windows.Forms.Button logout_button;
         private System.Windows.Forms.Button back_button;
-        private System.Windows.Forms.Button uod_state_button;
-        private System.Windows.Forms.ComboBox PatientComboBox;
+        private System.Windows.Forms.ComboBox TypeComboBox;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView HistoryDataGridView;
+        private System.Windows.Forms.Button ViewHistButton;
     }
 }
