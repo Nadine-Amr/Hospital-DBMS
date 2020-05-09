@@ -58,11 +58,11 @@ namespace DBapplication
             if (result >0)
             {
                 string scanEndTime = controllerObj.GetScanEndTime(_did, PatientComboBox.Text, ScanComboBox.Text);
-                MessageBox.Show("Scan has been Successfully Requested! You sould conduct your Scan before " + scanEndTime+ " ");
+                MessageBox.Show("Scan has been successfully requested! You should conduct your scan before " + scanEndTime+ ".");
             }
             else
             {
-                MessageBox.Show("Scan Request Failed");
+                MessageBox.Show("Scan request failed.");
             }
         }
     }

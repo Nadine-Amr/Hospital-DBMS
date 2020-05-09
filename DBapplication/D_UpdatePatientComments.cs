@@ -47,12 +47,12 @@ namespace DBapplication
 
                 if (result > 0)
                 {
-                    MessageBox.Show("The patient's comments has been successfuly Updated");
+                    MessageBox.Show("The patient's comments has been successfuly updated.");
                     
                 }
                 else
                 {
-                    MessageBox.Show("There was an error with updating the patient's comments");
+                    MessageBox.Show("There was an error with updating the patient's comments.");
                 }
             }
         }

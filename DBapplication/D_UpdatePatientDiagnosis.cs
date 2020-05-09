@@ -39,18 +39,18 @@ namespace DBapplication
         {
             if (diagnosisTextBox.Text=="")
             {
-                MessageBox.Show("Please Write a Diagnosis");
+                MessageBox.Show("Please write a diagnosis");
             }
             else
             {
                 int result = controllerObj.UpdatePatientDiagnosis(PatientComboBox.Text, _did, diagnosisTextBox.Text);
                 if (result >0)
                 {
-                    MessageBox.Show("The patient's Diagnosis has been successfuly Updated");
+                    MessageBox.Show("The patient's diagnosis has been successfuly updated");
                 }
                 else 
                 {
-                    MessageBox.Show("There was an error with updating the patient's Diagnosis");
+                    MessageBox.Show("There was an error with updating the patient's diagnosis");
                 }
             }
         }

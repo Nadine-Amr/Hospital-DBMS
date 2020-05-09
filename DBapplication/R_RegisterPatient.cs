@@ -21,9 +21,7 @@ namespace DBapplication
             DataTable dt1 = controllerObj.SelectAllUnRelievedPatients();
             PatientComboBox.DataSource = dt1;
             PatientComboBox.DisplayMember = "Name";
-            DataTable dt2 = controllerObj.SelectAllReciptionists();
-            ReciptionistComboBox.DataSource = dt2;
-            ReciptionistComboBox.DisplayMember = "Name";
+            
             DataTable dt3 = controllerObj.SelectAllDoctors();
             DoctorComboBox.DataSource = dt3;
             DoctorComboBox.DisplayMember = "Name";
@@ -46,30 +44,25 @@ namespace DBapplication
 
         private void RegisterButton_Click(object sender, EventArgs e)
         {
-            if (RoomComboBox.Text =="")
+            if (controllerObj.DoctorFreeCheck(controllerObj.GetDoctorIDFromName(DoctorComboBox.Text),(int)ReservedNumericUpDown.Value,controllerObj.GetRoomsIDsOfCertainType(RoomComboBox.Text))!=0)
             {
-                MessageBox.Show("Please Choose A Room Type");
-            }
-            else if (controllerObj.DoctorFreeCheck(controllerObj.GetDoctorIDFromName(DoctorComboBox.Text),(int)ReservedNumericUpDown.Value,controllerObj.GetRoomsIDsOfCertainType(RoomComboBox.Text))!=0)
-            {
-                //MessageBox.Show("please make sure that a room is available");9
                 long RoomID = controllerObj.DoctorFreeCheck(controllerObj.GetDoctorIDFromName(DoctorComboBox.Text), (int)ReservedNumericUpDown.Value, controllerObj.GetRoomsIDsOfCertainType(RoomComboBox.Text));
                 
               
-                    int result = controllerObj.insertRegisteration(controllerObj.GetReceptionistIDFromName(ReciptionistComboBox.Text), controllerObj.GetDoctorIDFromName(DoctorComboBox.Text), controllerObj.GetPatientIDFromName(PatientComboBox.Text), RoomID, (int)ReservedNumericUpDown.Value);
+                    int result = controllerObj.insertRegisteration(_recid, controllerObj.GetDoctorIDFromName(DoctorComboBox.Text), controllerObj.GetPatientIDFromName(PatientComboBox.Text), RoomID, (int)ReservedNumericUpDown.Value);
                     if (result>0)
                     {
-
-
-
-                    MessageBox.Show("Reservation was successfull ");
-                        
+                        MessageBox.Show("Reservation was successfull ");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Sorry, reservation failed.");
                     }
               
             }
             else
             {
-                MessageBox.Show("Doctor  is not free at this time slot Or there might not be enough rooms");
+                MessageBox.Show("Doctor  is not free at this time slot Or there might not be enough rooms.");
             }
         }
     }

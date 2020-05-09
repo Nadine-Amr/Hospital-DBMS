@@ -102,7 +102,6 @@ Create Table Room
  Size FLOAT  CHECK (Size >= 30 AND Size <= 60),
  Price FLOAT NOT NULL CHECK (Price >= 100 AND Price <= 1000),
  Department_ID int NOT NULL,
- Room_Availability int DEFAULT 0,
  PRIMARY KEY (RID),
  FOREIGN KEY (Department_ID) REFERENCES Department,
 );
@@ -232,11 +231,11 @@ Values
 ('vitamins',90,'2090-04-19')
 
 
-insert into Room(Type,Size,Price,Department_ID,Room_Availability) 
+insert into Room(Type,Size,Price,Department_ID) 
 Values
-('Examination Room',40,900,1,0),
-('Examination Room',50,800,2,1),
-('Examination Room',35,950,3,0)
+('Examination Room',40,900,1),
+('Examination Room',50,800,2),
+('Examination Room',35,950,3)
 
 
 insert into Registration(Reciptionist_ID,Doctor_ID,Patient_ID,Room_ID,Date,Reserved_Time_Slot,State,Diagnosis,Comments)

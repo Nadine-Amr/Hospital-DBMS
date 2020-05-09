@@ -336,9 +336,9 @@ namespace DBapplication
             else
             {
                 query = "Insert into Prescribed_Medications(Medication_ID, Registration_ID, Prescription_Time, Dosage) "
-                          + " select RegID, MID, GETDATE(), '" + Dosage + "'"
-                          + " From Registration as R, Medication as M"
-                          + " where M.MID = (select MID from Medication where Name = '" + MedicationName + "') AND R.RegID = (select Top 1 RegID from Registration where(Patient_ID = (select PID from Patient where Name= '" + PatientName + "')) AND(Doctor_ID =" + DoctorID + ") Order By Date Desc )";
+                          + " select MID, RegID, GETDATE(), '" + Dosage + "' "
+                          + "From Registration as R, Medication as M "
+                          + "where M.MID = (select MID from Medication where Name = '" + MedicationName + "') AND R.RegID = (select Top 1 RegID from Registration where(Patient_ID = (select PID from Patient where Name= '" + PatientName + "')) AND(Doctor_ID =" + DoctorID + ") Order By Date Desc )";
             }
 
             return dbMan.ExecuteNonQuery(query);
@@ -379,8 +379,25 @@ namespace DBapplication
             string query = "insert into Doctor_Ratings" +
                                                 " Values" +
                                     "("+patientID+", "+DoctorID+", GETDATE(), "+Rate+")";
+
             return dbMan.ExecuteNonQuery(query);
+
         }
+
+        public DataTable GetDrAvgRating(int did)
+        {
+            string query = "SELECT AVG(Rate) as 'Avg_Rating' FROM Doctor_Ratings WHERE Doctor_ID = " + did;
+            return dbMan.ExecuteReader(query);
+        }
+
+        public int UpdateDrAvgRating(int did, double avgRating)
+        {
+            string query = "Update Doctor SET Avg_Rating = " + avgRating +" Where DID = " + did;
+
+            return dbMan.ExecuteNonQuery(query);
+
+        }
+
 
         public int UpdatePatientState(string PatientNAme, long DoctorID, string state)
         {
@@ -974,19 +991,5 @@ namespace DBapplication
             return dbMan.ExecuteNonQuery(query);
 
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
