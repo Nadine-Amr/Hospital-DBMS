@@ -99,13 +99,21 @@ namespace DBapplication
 
         private void gen_stat_rep_button_Click(object sender, EventArgs e)
         {
-            new A_GenerateStatisticalReports((long)_aid).Show();
+            new ViewsAndStatisticsForm(_aid).Show();
             this.Close();
+            //new A_GenerateStatisticalReports((long)_aid).Show();
+            //this.Close();
         }
 
         private void upd_info_button_Click(object sender, EventArgs e)
         {
             new A_UpdateInfo((long)_aid).Show();
+            this.Close();
+        }
+
+        private void ReportViewButton_Click(object sender, EventArgs e)
+        {
+            new ViewsAndStatisticsForm(_aid).Show();
             this.Close();
         }
     }
