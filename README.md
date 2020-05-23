@@ -1,6 +1,6 @@
 # Hospital Database Management System
 
-This program offers the following functionalities and priveleges to four main users:
+This program offers the following functionalities and privileges to four main users:
 
 1. Patients:
  - Request room change
